@@ -1,0 +1,435 @@
+html {
+    font-size: 16px;
+}
+
+html, body {
+    width: 100%;
+    min-width: 200px;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+    background-color: #f3f3f3ea;
+    color: #2c2c2c;
+    font-family: 'Quicksand';
+}
+
+h2 {
+    
+    text-align: center;
+}
+
+@media only screen and (max-width: 750px) {
+    h2 {
+        margin: 0;
+        text-align: center;
+    }
+}
+
+/* HEADER Section */
+
+
+header {
+    background-color: transparent;
+    width: 100%;
+    
+}
+
+#bannersection {
+    margin-bottom: 4rem;
+}
+
+header h1 {
+    color: white;
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+
+
+
+header .content {
+    display: flexbox;
+    align-items: center;
+    padding: 1.5rem;
+    justify-content: center;
+   
+}
+
+.nav-link:hover {
+    cursor: pointer;
+}
+
+#navbarmobile {
+    display: none;
+}
+
+#navbarhome {
+    text-shadow: 1px 1px 2px black;
+}
+
+header .content nav {
+    display: flex;
+    font-size: 1.2rem;
+}
+
+.nav-item {
+    padding-left: 2rem;
+}
+
+#title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 2rem;
+    justify-content: center;
+  
+}
+
+#mobiletitle {
+    display: none;
+}
+
+header .content h1 {   
+    font-size: 4rem;
+    text-shadow: 1px 1px 2px #2c2c2c;
+    font-family: 'Poiret One';  
+    margin-bottom: 2rem;
+    flex: 1 1 100%;
+}
+
+header .content a {
+    text-decoration: none;
+    color: white;
+}
+
+.banner {
+    width: 100%;
+    height: 30rem;
+    background-image: url('./images/background1.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+
+
+@media only screen and (max-width: 750px) {
+    #navbarhome {
+        display: none;
+    }
+
+    #navbarmobile {
+        display: block;
+        width: 100%;
+        padding: .5rem 0;
+      }
+    
+    
+    #navbarmobile ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding-left: 0;
+        list-style-type: none;
+      }
+    
+    #navbarmobile li {
+        padding: 0;
+        margin: 0;
+    }
+
+}
+
+@media only screen and (max-width: 470px) {
+    header .content h1 {   
+        font-size: 3rem;
+        
+    }
+
+    #title {
+        display: none;
+    }
+
+    #mobiletitle {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding-top: 2rem;
+        justify-content: center;
+    } 
+}
+
+
+/* portfolioS Section */
+
+#portfolio-section {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 0 1 100%;
+    justify-content: space-evenly;
+    margin-bottom: 4rem;
+    padding: 0 1rem;
+}
+
+
+.portfolio {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    flex: 0 1 35%;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+    margin: 1.5rem;
+    border-radius: 5rem;
+    
+}
+
+.portfolio .content {
+    margin-top: auto;
+}
+
+.portfolio .image-container {
+    padding-bottom: 1rem;
+    width: 100%;
+}
+
+.portfolio .image-container img {
+    border-radius: 4rem;
+    max-height: 15rem;
+    max-width: 20rem;
+}
+
+@media only screen and (max-width: 350px) {
+    .portfolio .image-container img {
+        display: none;
+    }
+
+    #portfolio-section {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .portfolio {
+        display: flex;
+        width: 100%;
+        flex: 1 1;
+        padding: 2rem;
+        margin: 1.5rem;
+        border-radius: 5rem;
+        min-width: 200px;
+    }
+
+}
+
+
+/* quote Section */
+
+#quotes-section {
+    display: flex;
+    flex: 1 2 100%;
+    padding: 2rem 6rem;
+    justify-items: center;
+    background-color: rgb(68, 68, 68);
+    color: white;
+    align-items: center;
+    text-align: center;
+}
+
+#quotes-section .quote {
+    justify-content: center;
+    font-family: 'Dancing Script';
+    font-size: 2rem;
+}
+
+@media only screen and (max-width: 500px) {
+    #quotes-section .quote {
+        font-size: 1.5rem;
+    }
+
+    #quotes-section {
+        padding: 1rem 3rem;
+    }
+}
+
+
+/* aboutme Section */
+
+#aboutme-section {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1 1 100%;
+    justify-content: space-evenly;
+    margin-bottom: 2rem;
+    padding: 0 2rem;
+    align-items: center;
+}
+
+#aboutcontent {   
+    flex-basis: 40rem;
+    flex: 1 1 60%;
+}
+
+#imgdubai {
+    max-width: 20rem;
+    margin: 2rem 2rem;
+}
+
+.aboutme {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    height: auto;
+}
+
+.aboutme button {
+    margin-top: auto;
+}
+
+/* skills */
+
+#skills-section {
+    width: 40%;
+    min-width: 590px;
+    text-align: center;
+    margin: auto;
+    padding: 3rem 0;
+}
+
+#skillsbox {
+    width: 100%;
+    padding: 30px 30px 50px;
+    border-radius: 10px;
+}
+
+/* bars design */
+
+.details {
+    width: 100%;
+    display: flex;  
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.bar {
+    position: relative;
+    border: 1px solid #eb7100;
+    border-radius: 20px;
+}
+
+.bar div {
+    position: relative;
+    width: 0;
+    height: 10px;
+    border-radius: 10px;
+    background-color: #eb7100;
+}
+
+.skills:not(:last-child) {
+    margin-bottom: 30px;
+}
+
+/* filling bars */
+
+.active #html-bar {
+    animation: html-fill 7s forwards;
+}
+
+@keyframes html-fill{
+    100%{
+        width: 90%;
+    }
+}
+
+.active #css-bar {
+    animation: css-fill 7s forwards;
+}
+
+@keyframes css-fill{
+    100%{
+        width: 70%;
+    }
+}
+
+.active #php-bar {
+    animation: php-fill 7s forwards;
+}
+
+@keyframes php-fill{
+    100%{
+        width: 50%;
+    }
+}
+
+.active #javascript-bar {
+    animation: javascript-fill 7s forwards;
+}
+
+@keyframes javascript-fill{
+    100%{
+        width: 70%;
+    }
+}
+
+.active #python-bar {
+    animation: py-fill 7s forwards;
+}
+
+@keyframes py-fill{
+    100%{
+        width: 80%;
+    }
+}
+
+.active #c-bar {
+    animation: c-fill 7s forwards;
+}
+
+@keyframes c-fill{
+    100%{
+        width: 85%;
+    }
+}
+
+@media only screen and (max-width:700px) {
+    .aboutme {
+        border-radius: 4rem;
+    }
+}
+
+/* contact section */
+#contact-section {
+    display: flex;
+    margin: 2rem 1rem;
+    text-align: center;
+}
+
+/* footer Section */
+
+footer {
+    background-color: #e0e0e0d3;
+}
+
+#footersection {
+    display: flex;
+    flex: 0 1 100%;
+    justify-items: center;
+    justify-content: center;
+    padding: 2rem 0;
+}
+
+@media only screen and (max-width:400px) {
+    #footersection {
+        padding: 2rem 3rem;
+    }
+}
+
+
+
