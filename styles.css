@@ -5,26 +5,49 @@ html {
 html, body {
     width: 100%;
     min-width: 200px;
-    height: 100%;
     margin: 0px;
     padding: 0px;
     overflow-x: hidden;
-    background-color: #f3f3f3ea;
+    background-color: #fffffff1;
     color: #2c2c2c;
     font-family: 'Quicksand';
 }
 
-h2 {
-    
+#contacth2, #aboutmeh2, #portfolioh2 {
+    padding-top: 3rem;
     text-align: center;
+    font-size: 3rem;
+    padding-bottom: 4rem;
 }
 
+h2 {
+    padding-bottom: 2rem;
+}
+
+main {
+    animation-name: appear;
+    animation-duration: 1s;
+    animation-play-state: paused;
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+        
+    }
+    100% {
+        opacity: 1;
+    }
+  }
+
 @media only screen and (max-width: 750px) {
-    h2 {
-        margin: 0;
+    #contacth2, #aboutmeh2, #portfolioh2 {
+        padding-bottom: 2rem;
         text-align: center;
     }
 }
+
+
 
 /* HEADER Section */
 
@@ -35,16 +58,13 @@ header {
     
 }
 
-#bannersection {
-    margin-bottom: 4rem;
-}
 
 header h1 {
+    top: 5rem;
     color: white;
     font-size: 3rem;
     font-weight: 600;
 }
-
 
 
 
@@ -62,10 +82,18 @@ header .content {
 
 #navbarmobile {
     display: none;
+
+}
+
+.mobilebutton {
+    background-color: transparent;
+    border: none;
+    color: white;
 }
 
 #navbarhome {
     text-shadow: 1px 1px 2px black;
+    
 }
 
 header .content nav {
@@ -74,7 +102,7 @@ header .content nav {
 }
 
 .nav-item {
-    padding-left: 2rem;
+    padding-left: 1rem;
 }
 
 #title {
@@ -82,7 +110,7 @@ header .content nav {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding-top: 2rem;
+    margin-top: 8rem;
     justify-content: center;
   
 }
@@ -114,6 +142,12 @@ header .content a {
   }
 
 
+@media only screen and (max-width: 750px) {
+    .banner {
+        height: 25rem;
+    }
+  }
+
 
 @media only screen and (max-width: 750px) {
     #navbarhome {
@@ -121,9 +155,11 @@ header .content a {
     }
 
     #navbarmobile {
-        display: block;
+        display: flex;
+        justify-content: space-evenly;
+        color: white;
+        padding: 0.5rem 1rem;
         width: 100%;
-        padding: .5rem 0;
       }
     
     
@@ -137,18 +173,13 @@ header .content a {
       }
     
     #navbarmobile li {
-        padding: 0;
+        padding: 0 1rem;
         margin: 0;
     }
 
 }
 
-@media only screen and (max-width: 470px) {
-    header .content h1 {   
-        font-size: 3rem;
-        
-    }
-
+@media only screen and (max-width: 600px) {
     #title {
         display: none;
     }
@@ -158,9 +189,37 @@ header .content a {
         flex-direction: column;
         align-items: center;
         text-align: center;
-        padding-top: 2rem;
+        margin-top: 8rem;
         justify-content: center;
     } 
+  }
+
+@media only screen and (max-width: 470px) {
+
+    #navbarmobile {
+        font-size: 1rem;
+      }
+
+    header .content h1 {   
+        font-size: 3rem;    
+    }
+
+    .banner {
+        height: 20rem;
+    }
+}
+
+@media only screen and (max-width: 300px) {
+
+    #navbarmobile {
+        padding: 0;
+        font-size: 0.7rem;
+      }
+
+    #navbarmobile li {
+        padding: 0;
+        margin: 0;
+    }
 }
 
 
@@ -170,17 +229,18 @@ header .content a {
     display: flex;
     flex-wrap: wrap;
     flex: 0 1 100%;
-    justify-content: space-evenly;
+    justify-content: center;
     margin-bottom: 4rem;
     padding: 0 1rem;
 }
 
 
 .portfolio {
-    background-color: white;
+    background-color: rgba(41, 41, 41, 0.925);
+    color: white;
     display: flex;
     flex-direction: column;
-    flex: 0 1 35%;
+    flex: 0 1 30%;
     align-items: center;
     text-align: center;
     padding: 1rem;
@@ -194,14 +254,16 @@ header .content a {
 }
 
 .portfolio .image-container {
-    padding-bottom: 1rem;
-    width: 100%;
+    padding-bottom: 2rem;
+    height: 15rem;
+    width: 20rem;
 }
 
 .portfolio .image-container img {
-    border-radius: 4rem;
+    overflow: hidden;
     max-height: 15rem;
     max-width: 20rem;
+    border-radius: 4rem;
 }
 
 @media only screen and (max-width: 350px) {
@@ -268,17 +330,22 @@ header .content a {
     margin-bottom: 2rem;
     padding: 0 2rem;
     align-items: center;
+    animation-name: appear;
+    animation-duration: 1s;
+    animation-play-state: paused;
 }
 
 #aboutcontent {   
-    flex-basis: 40rem;
-    flex: 1 1 60%;
+    flex: 1 1 40rem;
+
 }
 
 #imgdubai {
-    max-width: 20rem;
-    margin: 2rem 2rem;
+    max-width: 25rem;
+    margin: 2rem 2rem 2rem 2rem;
+    border-radius: 2rem;
 }
+
 
 .aboutme {
     display: flex;
@@ -288,6 +355,7 @@ header .content a {
     margin-bottom: 2rem;
     height: auto;
 }
+
 
 .aboutme button {
     margin-top: auto;
@@ -299,8 +367,8 @@ header .content a {
     width: 40%;
     min-width: 590px;
     text-align: center;
-    margin: auto;
-    padding: 3rem 0;
+    padding-top: 4rem;
+    margin: 3rem auto;
 }
 
 #skillsbox {
@@ -339,7 +407,7 @@ header .content a {
 /* filling bars */
 
 .active #html-bar {
-    animation: html-fill 7s forwards;
+    animation: html-fill 5s forwards;
 }
 
 @keyframes html-fill{
@@ -349,7 +417,7 @@ header .content a {
 }
 
 .active #css-bar {
-    animation: css-fill 7s forwards;
+    animation: css-fill 5s forwards;
 }
 
 @keyframes css-fill{
@@ -359,7 +427,7 @@ header .content a {
 }
 
 .active #php-bar {
-    animation: php-fill 7s forwards;
+    animation: php-fill 5s forwards;
 }
 
 @keyframes php-fill{
@@ -369,7 +437,7 @@ header .content a {
 }
 
 .active #javascript-bar {
-    animation: javascript-fill 7s forwards;
+    animation: javascript-fill 5s forwards;
 }
 
 @keyframes javascript-fill{
@@ -379,7 +447,7 @@ header .content a {
 }
 
 .active #python-bar {
-    animation: py-fill 7s forwards;
+    animation: py-fill 5s forwards;
 }
 
 @keyframes py-fill{
@@ -389,7 +457,7 @@ header .content a {
 }
 
 .active #c-bar {
-    animation: c-fill 7s forwards;
+    animation: c-fill 5s forwards;
 }
 
 @keyframes c-fill{
@@ -398,17 +466,67 @@ header .content a {
     }
 }
 
+
 @media only screen and (max-width:700px) {
     .aboutme {
         border-radius: 4rem;
     }
 }
 
+
+@media only screen and (max-width:590px) {
+    #skills-section {
+        min-width: 400px;
+    }
+}
+
+@media only screen and (max-width:430px) {
+    #imgdubai {
+        max-width: 20rem;
+    }
+}
+
+@media only screen and (max-width:400px) {
+    #skills-section {
+        min-width: 300px;
+    }
+}
+
+@media only screen and (max-width:340px) {
+    #imgdubai {
+        max-width: 15rem;
+    }
+}
+
+@media only screen and (max-width:300px) {
+    #skills-section {
+        min-width: 200px;
+    }
+}
+
+@media only screen and (max-width:260px) {
+    #imgdubai {
+        max-width: 10rem;
+    }
+}
+
+
 /* contact section */
 #contact-section {
     display: flex;
-    margin: 2rem 1rem;
     text-align: center;
+    padding-bottom: 5rem;
+}
+
+#logofb {
+    width: 3rem;
+    height: auto;
+}
+
+#contactdiv {    
+    animation-name: appear;
+    animation-duration: 1s;
+    animation-play-state: paused;
 }
 
 /* footer Section */
@@ -416,6 +534,7 @@ header .content a {
 footer {
     background-color: #e0e0e0d3;
 }
+
 
 #footersection {
     display: flex;

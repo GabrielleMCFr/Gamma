@@ -8,231 +8,223 @@
         
         <!-- css -->    
         <link rel="stylesheet" href="./styles.css">
+        <link rel="stylesheet" href="./glow.css">
+        <link rel="stylesheet" href="./portfoliocss.css">
+
 
         <!-- google fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Antic+Slab&family=Cinzel:wght@700&family=Dancing+Script&family=Gideon+Roman&family=Manrope:wght@200;300;400;500;600;700&family=Poiret+One&family=Quicksand:wght@400;500;600;700&family=Satisfy&display=swap" rel="stylesheet">
+        
+        <!-- meta -->
         <meta charset="UTF-8">
         <meta name="viewport" content="initial-scale=1, width=device-width">
+
+        <!-- jquery and js files -->
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous" defer></script>
         <script src="./main.js" defer></script>
     </head>
 
     <body>
-       <!-- Main Content -->
-  <main class="main-content">
-
-    <!-- header Section -->
-    <div id="bannersection" class="banner">
-      <header>
-        <div class="content ">
-          <nav class="transparent navbar navbar-expand-lg " id="navbarhome">
-            <div class="container-fluid ">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  
-                  <li class="nav-item">
-                    <a class="nav-link" id="aboutmenav">About me</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" id="portfolionav">Porfolio</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" id="contactnav">Contact</a>
-                  </li>
-                  
-                </ul>
-            </div>
-          </nav>
-
-          <nav class="mobile" id="navbarmobile">
-                <ul>
-                  <li>
-                    <a href="#bannersection">🏠</a>
-                  </li>
-                  <li>
-                    <a  href="#portfolio-section">💎</a>
-                  </li>
-                  <li >
-                    <a href="#aboutme-section">💰</a>
-                  </li>
-                </ul>
-        
-          </nav>
-
-          <div id="title">
-            <h1>Gabrielle Marsallon Courtaud</h1>
-            <button type="button" class="btn btn-outline-light btn-lg" onclick="contactview()" id="contactbutton">Contact me</button>
-          </div>
-
-          <div id="mobiletitle">
-            <h1> Gabrielle MC</h1>
-            <button type="button" class="btn btn-outline-light btn-lg" id="contactbutton">Contact me</button>
-          </div>
-        </div>
-      </header>
-      
-    </div>
-
-    <section id="aboutme">
-      <h2>About me</h2>
-        <br> 
-        <!-- about me Section  MAKE A GRID -->
-        <div id="aboutme-section">
-            <div>
-              <img src="images/S48B9387.jpg" id="imgdubai">
-            </div>
-            <div id="aboutcontent">
-              <p>After graduating from high school with honors, I spent the next years carving my own little corner of the world, aka buying my house and building infrastructure for all the animals I own, especially horses. In this time, I also perfected my english skills and learnt a bit of spanish and russian.</p>   
-              <br>
-              <p>Then, I decided to come back to my first love, programming. I took courses like CS50, CS50W, and so obtained a professional certificate in web devlopment from Harvard, and I am currently in a full stack engineer cursus and a AI course.</p>
-            </div>
-        </div>
-        <div id="skills-section">
-          <h3>Skills</h3>
-          <div id="skillsbox">
-            <div class="skills">
-              <div class="details">
-                <span>HTML</span>
-                <span>90%</span>
-              </div>
-              <div class="bar">
-                 <div id="html-bar"></div>
-              </div>
-            </div>
-            <div class="skills">
-              <div class="details">
-                <span>CSS</span>
-                <span>70%</span>
-              </div>
-              <div class="bar">
-                 <div id="css-bar"></div>
-              </div>
-            </div>
-            <div class="skills">
-              <div class="details">
-                <span>Javascript</span>
-                <span>70%</span>
-              </div>
-              <div class="bar">
-                 <div id="javascript-bar"></div>
-              </div>
-            </div>
-            <div class="skills">
-              <div class="details">
-                <span>PHP</span>
-                <span>50%</span>
-              </div>
-              <div class="bar">
-                 <div id="php-bar"></div>
-              </div>
-            </div>
-            <div class="skills">
-              <div class="details">
-                <span>Python</span>
-                <span>80%</span>
-              </div>
-              <div class="bar">
-                 <div id="python-bar"></div>
-              </div>
-            </div>
-            <div class="skills">
-              <div class="details">
-                <span>C</span>
-                <span>85%</span>
-              </div>
-              <div class="bar">
-                 <div id="c-bar"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-    </section>
-
-    <section id="portfolio">
-        <h2>Portfolio</h2>
+   
+      <div id="intro">
+        <h1 class="glowIn" id="glowintitle">Hello there!</h1>
+        <p class="glowIn" id="glowinp">This is my github page, mostly meant to show my main projects. Take a look around and feel free to contact me! Press enter or any key to access the website or click on the button below.</p>
         <br>
-        <!-- Portfolio Section FIND A WAY TO DISPLAY STUFF BETTER.-->
-        <div id="portfolio-section">
-          
-          <div id="portfolio1" class="portfolio">
-              <div class="image-container">
-                  <a href="https://equiplan.herokuapp.com/">
-                    <img src="./images/pegasus2.jpg" id="img1"/>
-                  </a>
+        <h1 class="glowIn" id="glowintitlefr">Salut!</h1>
+        <p class="glowIn" id="glowinpfr">Cette page github est principalement mon portfolio. Vous pouvez me contacter via l'onglet contact au besoin. Appuyez sur entrée ou n'importe quelle touche pour afficher le site ou cliquez sur le bouton ci-dessous.</p>  
+        <br>
+        <button class="glowIn btn btn-outline-light" onclick=startview()>Enter</button>
+      </div>
+    
+       <!-- Main Content -->
+      <main class="main-content" id="maincontent">
+        <!-- header Section -->
+        <section id="bannersection" class="banner">
+          <header>
+            <div class="content">
+              <nav class="transparent navbar fixed-top navbar-expand-sm" id="navbarhome">
+                <div class="justify-content-center container-fluid" >
+                    <ul class="navbar-nav mb-2 mb-lg-0 " >
+                      <li class="nav-item">
+                        <a class="nav-link" id="aboutmenav">About me</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" id="portfolionav">Portfolio</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" id="contactnav">Contact</a>
+                      </li>                  
+                    </ul>
+                </div>
+              </nav>
+
+              <nav class="mobile fixed-top bg-dark" id="navbarmobile">
+                    <ul>
+                      <li>
+                        <button class="mobilebutton"  onclick="aboutview()">About me</button>
+                      </li>
+                      <li>
+                        <button class="mobilebutton" onclick="portfolioview()">Portfolio</button>
+                      </li>
+                      <li >
+                        <button class="mobilebutton" onclick="contactview()">Contact</button>
+                      </li>
+                    </ul>        
+              </nav>
+
+              <div id="title">
+                <h1>Gabrielle Marsallon Courtaud</h1>
                 
               </div>
-              <div class="content">
-                <h5>Equiplan </h5>
-                <p>Planning application for horses' owners</p>
-                <a href="https://equiplan.herokuapp.com/">Equiplan site</a>
+
+              <div id="mobiletitle">
+                <h1> Gabrielle MC</h1>
+                
               </div>
-          </div>
-      
-          <div id="portfolio2" class="portfolio">
-            <div class="image-container">
-              <img src="./images/Encryption.png" id="img2"/>
             </div>
-            <div class="content">
-              <h5>AES (C)</h5>
-              <p>AES 128/196/256 (private repo)</p>
-            </div>
-          </div>
-      
-          <div id="portfolio3" class="portfolio">
-            <div class="image-container">
-              <img src="./images/dev2.jpg" id="img3"/>
-            </div>
-            <div class="content">
-              <h5>Project 3</h5>
-              <p>description</p>
-            </div>
-          </div>
-      
-          <div id="portfolio4" class="portfolio">
-            <div class="image-container">
-              <img src="./images/dev2.jpg" id="img4"/>
-            </div>
-            <div class="content">
-              <h5>Project 4</h5>
-              <p>description</p>
-            </div>
-          </div>
-          
-        </div>
+          </header>     
+        </section>
 
-      </section>
-    
+        <section id="aboutme" >
+          <h2 id="aboutmeh2" tabindex="0">About me</h2>
+            <br> 
+            <!-- about me Section -->
+            <div id="aboutme-section" tabindex="0">
+                <div class="imgwrapper">
+                  <img src="images/S48B9387.jpg" id="imgdubai" alt="dubai">
+                </div>
+                <div id="aboutcontent">
+                  <p>After graduating from high school with honors, I spent the next years carving my own little corner of the world, aka buying my house and building infrastructure for all the animals I own, especially horses. In this time, I also perfected my english skills and learnt a bit of spanish and russian.</p>   
+                  <br>
+                  <p>Then, I decided to deepen my knowledge of one of my hobbies, programming. I took courses like CS50, CS50W, and so obtained a professional certificate in web devlopment from Harvard, and I am currently attending a full stack engineer cursus and a AI course.</p>
+                </div>
+            </div>
+            <div id="skills-section">
+              <h3 id="skillstitle">Skills</h3>
+              <div id="skillsbox">
+                <div class="skills">
+                  <div class="details">
+                    <span>HTML</span>
+                    <span>90%</span>
+                  </div>
+                  <div class="bar">
+                    <div id="html-bar"></div>
+                  </div>
+                </div>
+                <div class="skills">
+                  <div class="details">
+                    <span>CSS</span>
+                    <span>70%</span>
+                  </div>
+                  <div class="bar">
+                    <div id="css-bar"></div>
+                  </div>
+                </div>
+                <div class="skills">
+                  <div class="details">
+                    <span>Javascript</span>
+                    <span>70%</span>
+                  </div>
+                  <div class="bar">
+                    <div id="javascript-bar"></div>
+                  </div>
+                </div>
+                <div class="skills">
+                  <div class="details">
+                    <span>PHP</span>
+                    <span>50%</span>
+                  </div>
+                  <div class="bar">
+                    <div id="php-bar"></div>
+                  </div>
+                </div>
+                <div class="skills">
+                  <div class="details">
+                    <span>Python</span>
+                    <span>80%</span>
+                  </div>
+                  <div class="bar">
+                    <div id="python-bar"></div>
+                  </div>
+                </div>
+                <div class="skills">
+                  <div class="details">
+                    <span>C</span>
+                    <span>85%</span>
+                  </div>
+                  <div class="bar">
+                    <div id="c-bar"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </section>
 
-       
-    <!-- contact Section -->
-    <div id="contact-section">
-        <h2>Contact</h2>
-    <br> 
+        <section id="portfolio">
+            <h2 id="portfolioh2" tabindex="0">Portfolio</h2>
+            <br>
+            <!-- Portfolio Section -->
+            <div class="container">
+              <div class="card">
+                <figure class="card__thumb">
+                  <img src="images/encrypt.jpg" alt="lock" class="card__image">
+                  <figcaption class="card__caption">
+                    <h2 class="card__title">AES 256/192/128</h2>
+                    <p class="card__snippet">AES encryptor and decryptor written in C. </p>
+                  </figcaption>
+                </figure>
+              </div>
+            
+              <div class="card">
+                <figure class="card__thumb">
+                  <img src="images/pivoine.JPG" alt="horse named pivoine" class="card__image">
+                  <figcaption class="card__caption">
+                    <h2 class="card__title">Equiplan</h2>
+                    <p class="card__snippet">Planning application to help horses owners to organize their horses' data.</p>
+                    <a href="https://equiplan.herokuapp.com/" class="card__button">Visit website</a>
+                  </figcaption>
+                </figure>
+              </div>
+            
+              <div class="card">
+                <figure class="card__thumb">
+                  <img src="images/nextproject.jpg" alt="next project" class="card__image">
+                  <figcaption class="card__caption">
+                    <h2 class="card__title">Next project</h2>
+                    <p class="card__snippet">Whatever it's going to be next time.</p>
+                    
+                  </figcaption>
+                </figure>
+              </div>
+            </div>
+          </section>
+            
+          <!-- contact Section -->
+          <div id="contact-section">    
+            <h2 id="contacth2" tabindex="0">Contact</h2>
+            <br> 
+            <br>
+            <div class="contact" id="contactdiv">
+              <h4>Feel free to contact me</h4>     
+              <a href="https://www.facebook.com/haras.declayrel.7/"> <img src="images/facebook.png" id="logofb" title="My facebook account" alt="link to facebook account"></a>
+              <p>gabrielle.mc@outlook.fr</p>        
+            </div>   
+          </div>
 
-        <div id="price1" class="contact">
-          <h4>Feel free to contact me</h4>
-        
-          <p>Facebook </p>
-          <p>gabrielle.mc@outlook.fr</p>
-          
-        </div>
-        
-      </div>
-
-        <!-- Quotes Section -->
-        <div id="quotes-section">
+          <!-- Quotes Section -->
+          <div id="quotes-section">
             <span class="quote">"In some ways, programming is like painting. You start with a blank canvas and certain basic raw materials. You use a combination of science, art, and craft to determine what to do with them."  - <em>Andrew Hunt</em></span>
           </div>
         </div>
 
-    <!-- Footer -->
-    <footer>
-      <div id="footersection">
-        <span class="copyright">© 2022 Gabrielle Marsallon, All Rights Reserved</span>
-      </div>
-    </footer>
-
-  </main>
-
+        <!-- Footer -->
+        <footer>
+          <div id="footersection">
+            <span class="copyright">© 2022 Gabrielle Marsallon, All Rights Reserved </span>
+          </div>
+        </footer>
+      </main>
     </body>
-</html>
+  </html>
