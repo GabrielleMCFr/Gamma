@@ -1,3 +1,6 @@
 # My github page (portfolio) 
 
-## [My portfolio](https://gabriellemcfr.github.io/) Gabrielle MC
+## [My portfolio](https://gabriellemcfr.github.io/) 
+
+
+Gabrielle MC
