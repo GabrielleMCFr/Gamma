@@ -1,5 +1,5 @@
-document.addEventListener('DOMContentLoaded', function() {
 
+document.addEventListener('DOMContentLoaded', function() {
     // display main to none
     document.querySelector('main').style.display = "none";
 
@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     }, 800)
-    
+
     
     // intersection observer API, start animation whenever you scroll on the concerned box.
     let options = {
@@ -36,11 +36,19 @@ document.addEventListener('DOMContentLoaded', function() {
       }
 
     let skillsbox = document.getElementById('html-bar');
-      
     let observer = new IntersectionObserver(skillobserver, options);
     observer.observe(skillsbox);
 
-    document.addEventListener('keydown', startview)
+    /*let observer2 = new IntersectionObserver(aboutobserver, options);
+    let aboutdiv = document.getElementById('imgdubai');
+    observer2.observe(aboutdiv)
+
+    let observer3 = new IntersectionObserver(contactobserver, options);
+    let contactanimateddiv = document.getElementById('contacth2');
+    observer3.observe(contactanimateddiv); */
+
+
+    document.addEventListener('keydown', startview);
 
     // handle navbar desktop version
     const navbar = document.getElementById('navbarhome');
@@ -72,8 +80,92 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('contactnav').addEventListener('click', contactview);
     document.getElementById('portfolionav').addEventListener('click', portfolioview);
     document.getElementById('aboutmenav').addEventListener('click', aboutview);
+    document.getElementById('homenav').addEventListener('click', homeview);
+    document.getElementById('servicesnav').addEventListener('click', servicesview);
+    document.getElementById('pricingnav').addEventListener('click', pricingview);
+
 
 });
+function homeview() {
+    let contactsection = document.getElementById('contact-section');
+    let aboutme = document.getElementById('aboutme');
+    let portfolio = document.getElementById('portfolio');
+    let pricingsection = document.getElementById('pricing-section');
+    let servicessection = document.getElementById('services-section');
+
+    contactsection.style.display = "block";
+    aboutme.style.display = "block";
+    portfolio.style.display = "block";
+    servicessection.style.display = "block";
+    pricingsection.style.display = "block";
+
+    window.scroll(0, window.innerHeight - 40)
+
+}
+
+function servicesview() {
+
+    let contactsection = document.getElementById('contact-section');
+    let aboutme = document.getElementById('aboutme');
+    let portfolio = document.getElementById('portfolio');
+    let pricingsection = document.getElementById('pricing-section');
+    let servicessection = document.getElementById('services-section');
+
+    contactsection.style.display = "none";
+    aboutme.style.display = "none";
+    portfolio.style.display = "none";
+    servicessection.style.display = "block";
+    pricingsection.style.display = "none";
+
+    window.scroll(0, window.innerHeight - 40)
+
+    /*
+
+    if (window.screen.width < 720 && window.screen.width >= 470) {
+        window.scroll(0, 350);
+    }
+    else if (window.screen.width < 470) {
+        window.scroll(0, 280);
+    }
+    else {
+        window.scroll(0, 690);
+    }
+    */
+}
+
+
+function pricingview() {
+
+    let contactsection = document.getElementById('contact-section');
+    let aboutme = document.getElementById('aboutme');
+    let portfolio = document.getElementById('portfolio');
+    let pricingsection = document.getElementById('pricing-section');
+    let servicessection = document.getElementById('services-section');
+
+    contactsection.style.display = "none";
+    aboutme.style.display = "none";
+    portfolio.style.display = "none";
+    servicessection.style.display = "none";
+    pricingsection.style.display = "block";
+
+    window.scroll(0, window.innerHeight - 40)
+
+    /*
+
+    if (window.screen.width < 720 && window.screen.width >= 470) {
+        window.scroll(0, 350);
+    }
+    else if (window.screen.width < 470) {
+        window.scroll(0, 280);
+    }
+    else {
+        window.scroll(0, 690);
+    }
+
+    */
+
+}
+
 
 function startview() {
 
@@ -86,11 +178,13 @@ function startview() {
             document.querySelector('main').style.display = "block";
             document.querySelector('main').style.animationPlayState = 'running';
             // Trigger the button element with a click
-            document.getElementById('contact-section').style.display = 'none';
-            document.getElementById('aboutme').style.display = "none";
+            document.getElementById('contact-section').style.display = 'block';
+            document.getElementById('pricing-section').style.display = 'block';
+            document.getElementById('services-section').style.display = 'block';
+            document.getElementById('aboutme').style.display = "block";
             document.getElementById('portfolio').style.display = "block";   
-        },1000) 
-    }, 1000)   
+        },500) 
+    }, 500)   
 }
 
 
@@ -99,12 +193,20 @@ function contactview() {
     let contactsection = document.getElementById('contact-section');
     let aboutme = document.getElementById('aboutme');
     let portfolio = document.getElementById('portfolio');
+    let pricingsection = document.getElementById('pricing-section');
+    let servicessection = document.getElementById('services-section');
 
     contactsection.style.display = "block";
     aboutme.style.display = "none";
     portfolio.style.display = "none";
+    servicessection.style.display = "none";
+    pricingsection.style.display = "none";
 
     //document.getElementById('contacth2').focus({preventScroll:false});
+
+    window.scroll(0, window.innerHeight - 40)
+
+    /*
 
     if (window.screen.width < 720 && window.screen.width >= 470) {
         window.scroll(0, 350);
@@ -113,14 +215,12 @@ function contactview() {
         window.scroll(0, 280);
     }
     else {
-        window.scroll(0, 421);
+        window.scroll(0, 690);
     }
+    */
+    //document.getElementById('contactdiv').style.animationPlayState = 'running';
 
-    document.getElementById('contactdiv').style.animationPlayState = 'running';
-
-    const quotes = document.getElementById('quotes-section')
-    quotes.innerHTML = '<span class="quote">"Always code as if the guy who ends up maintaining your code will be a violent psychopath who knows where you live" - John Woods</span>'
-
+    
 }
 
 
@@ -128,10 +228,18 @@ function portfolioview() {
     let contactsection = document.getElementById('contact-section');
     let aboutme = document.getElementById('aboutme');
     let portfolio = document.getElementById('portfolio');
+    let pricingsection = document.getElementById('pricing-section');
+    let servicessection = document.getElementById('services-section');
 
     aboutme.style.display = "none";
     contactsection.style.display = "none";
     portfolio.style.display = "block";
+    pricingsection.style.display = "none";
+    servicessection.style.display = "none";
+
+    window.scroll(0, window.innerHeight - 40)
+
+    /*
 
     //document.getElementById('portfolioh2').focus({preventScroll:false});
     if (window.screen.width < 720 && window.screen.width >= 470) {
@@ -141,12 +249,10 @@ function portfolioview() {
         window.scroll(0, 280);
     }
     else {
-        window.scroll(0, 421);
+        window.scroll(0, 690);
     }
 
-    const quotes = document.getElementById('quotes-section')
-    quotes.innerHTML = '<span class="quote">"In some ways, programming is like painting. You start with a blank canvas and certain basic raw materials. You use a combination of science, art, and craft to determine what to do with them."  - <em>Andrew Hunt</em></span>'
-
+    */
 
 }
 
@@ -156,10 +262,18 @@ function aboutview() {
     let contactsection = document.getElementById('contact-section');
     let aboutme = document.getElementById('aboutme');
     let portfolio = document.getElementById('portfolio');
+    let pricingsection = document.getElementById('pricing-section');
+    let servicessection = document.getElementById('services-section');
 
     aboutme.style.display = "block";
     contactsection.style.display = "none";
     portfolio.style.display = "none";
+    pricingsection.style.display = "none";
+    servicessection.style.display = "none";
+
+    window.scroll(0, window.innerHeight - 40)
+
+    /*
 
     if (window.screen.width < 720 && window.screen.width >= 470) {
         window.scroll(0, 350);
@@ -168,16 +282,13 @@ function aboutview() {
         window.scroll(0, 280);
     }
     else {
-        window.scroll(0, 421);
+        window.scroll(0, 690);
     }
     //$("#aboutmeth2").focus();
     
+    */
 
-    document.getElementById('aboutme-section').style.animationPlayState = 'running';
-
-    const quotes = document.getElementById('quotes-section')
-    quotes.innerHTML = '<span class="quote">"Programming today is a race between software engineers striving to build bigger and better idiot-proof programs, and the Universe trying to produce bigger and better idiots. So far, the Universe is winning." -  Rick Cook, The Wizardry Compiled</span>'
-
+    //document.getElementById('aboutme-section').style.animationPlayState = 'running';
 
 }
 
@@ -191,6 +302,26 @@ function skillobserver(entries, observer) {
         else {
             document.getElementById('skillsbox').classList.remove('active');
         }
+        prevRatio = entry.intersectionRatio;
+      });
+}
+
+function aboutobserver(entries, observer) {
+    let prevRatio = 0.0;
+    entries.forEach((entry) => {
+        if (entry.intersectionRatio > prevRatio) {
+            document.getElementById('aboutme-section').style.animationPlayState = 'running';
+        } 
+        prevRatio = entry.intersectionRatio;
+      });
+}
+
+function contactobserver(entries, observer) {
+    let prevRatio = 0.0;
+    entries.forEach((entry) => {
+        if (entry.intersectionRatio > prevRatio) {
+            document.getElementById('contactdiv').style.animationPlayState = 'running';
+        } 
         prevRatio = entry.intersectionRatio;
       });
 }

@@ -6,12 +6,12 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: url('./images/background2.jpg');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./images/coffeelp1.webp');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   animation-name: finite;
-  animation-duration: 1s;
+  animation-duration: 0.8s;
   animation-play-state: paused;
     
 }
@@ -27,21 +27,23 @@
 }
 
 #intro p {
-  margin: 0em 5em 4em 5em;
+  margin: 0em 5em 0 5em;
   text-align: left;
   line-height: 1.8;
   font-family: Lora, serif;
+  font-size: larger;
 }
 #intro h1 {
   text-align: left;
   line-height: 1.8;
   font-family: Lora, serif;
+  font-size: 3rem;
 }
 .glowIn {
   color: white;
 }
 .glowIn span {
-  animation: glow-in 0.8s both;
+  animation: glow-in 0.1s both;
 }
 @keyframes glow-in {
   from {

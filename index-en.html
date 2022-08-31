@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Gammapps</title>
+        <!-- Bootstrap 5 -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        
+        <!-- css -->    
+        <link rel="stylesheet" href="./styles.css">
+        <link rel="stylesheet" href="./glow.css">
+        <link rel="stylesheet" href="./portfoliocss.css">
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+        <!-- google fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Antic+Slab&family=Cinzel:wght@700&family=Dancing+Script&family=Gideon+Roman&family=Manrope:wght@200;300;400;500;600;700&family=Poiret+One&family=Quicksand:wght@400;500;600;700&family=Satisfy&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&display=swap" rel="stylesheet">
+
+        <!-- meta -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="initial-scale=1, width=device-width">
+
+        <!-- jquery and js files -->
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous" defer></script>
+        <script src="./main.js" defer></script>
+    </head>
+
+    <body>
+   
+      <div id="intro">
+        <h1 class="glowIn" id="glowintitle">Welcome!</h1>
+        <p class="glowIn" id="glowinp">Professional and personnal websites creation services</p>
+        <p class="glowIn" id="glowinp">Web developpement</p>
+        <p class="glowIn" id="glowinp">Select enter to visit the website or choose the french version below.</p>
+        <p class="glowIn" id="glowinp">Have a nice visit !</p>
+        <br>
+        
+        <button class="glowIn btn btn-outline-light" onclick=startview()>Enter</button>
+        <br>
+        <a class="glowIn btn btn-outline-light" href="index.html">Version française</a>
+      </div>
+    
+       <!-- Main Content -->
+      <main class="main-content" id="maincontent">
+        <!-- header Section -->
+        <section id="bannersection" class="banner">
+          <header>
+            <div class="content">
+              <h4>GAMMAPPS</h4>
+              <nav class="transparent navbar fixed-top navbar-expand-sm" id="navbarhome">
+                <div class="justify-content-center container-fluid" >
+                  <ul class="navbar-nav mb-2 mb-lg-0 " >
+                    <li class="nav-item">
+                      <a class="nav-link" id="homenav">Home</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="servicesnav">Services</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="aboutmenav">About me</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="portfolionav">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="pricingnav">Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="contactnav">Contact</a>
+                    </li> 
+                  </ul>
+                </div>
+
+                🇫<a href="index.html" class="flag" id="flag" alt="French version">🇫🇷</a>
+              </nav>
+
+              <div class="navcontainer">
+                <div class="navcontent">
+                  <nav class="mobile navbar fixed-top bg-dark" id="navbarmobile2">
+                    <ul>
+                      <div id="menuToggle">
+                        <input type="checkbox" />
+                          <span></span>
+                          <span></span>
+                          <span></span>
+                      <ul id="menu">
+                        <li>
+                          <button class="mobilebutton"  onclick="homeview()">Home</button>
+                        </li>
+                        <li>
+                          <button class="mobilebutton"  onclick="servicesview()">Services</button>
+                        </li>
+                        <li>
+                          <button class="mobilebutton"  onclick="aboutview()">About me</button>
+                        </li>
+                        <li>
+                          <button class="mobilebutton" onclick="portfolioview()">Portfolio</button>
+                        </li>
+                        <li>
+                          <button class="mobilebutton"  onclick="pricingview()">Pricing</button>
+                        </li>
+                        <li >
+                          <button class="mobilebutton" onclick="contactview()">Contact</button>
+                        </li>
+                      </ul>
+                     </div>
+                    </ul> 
+                    
+                    <a href="index-en.html" id="flag" class="flag">🇺🇸</a> 
+              </nav>
+              
+               </div>
+            </div>
+
+              <div id="title">
+                <h1>Gammapps</h1>
+                <h3>Creation of your dream website and developping web applications</h3>
+                <button onclick="contactview()" class="btn btn-warning btn-lg">Contact me</button>
+              </div>
+
+              <div id="mobiletitle">
+                <h1> Gabrielle MC</h1>
+                
+              </div>
+            </div>
+          </header>     
+        </section>
+
+        <!-- services Section -->
+        <section id="services-section" tabindex="0">
+          <h2 id="servicesh2" tabindex="0">SERVICES</h2>
+          <h5>These are the main services offered: </h5>
+            <br> 
+            <div class="container">
+              <div class="servicecard" data-aos="fade-up">
+                <div class="iconcontainer" id="devimg"></div>
+                <div class="servicecontent">
+                <h6 class="titleservicecard">WEBSITE DEVELOPMENT</h6>
+                <p class="serviceparagraphe"><span class="highlight">Creation of modern, fast and convenient to use websites</span>, conform to the current web standards. They will be designed to meet specifically your needs and suit your taste. To create a website, I can use a CMS like Wordpress, or code by hand. I respond to different kinds of demands, whether this is for personal or commercial use (<span class="highlight">blog</span>, <span class="highlight">portfolio</span>, <span class="highlight">showcase website</span>, <span class="highlight">ecommerce website</span>, <span class="highlight">web application</span> or <span class="highlight">other more specific development</span>). The sites and applications are design responsive and can handle any platform (computer, tablet or mobile).</p>
+              </div>
+              </div>
+
+              <div class="servicecard" data-aos="fade-up">
+                <div class="iconcontainer" id="designimg"></div>
+                <div class="servicecontent">
+                <h6 class="titleservicecard">WEB DESIGN</h6>
+                <p class="serviceparagraphe">Le web design comprend, comme son nom l'indique, tout l'<span class="highlight">aspect graphique</span> d'un projet web, et également la <span class="highlight">facilité et la fluidité d'utilisation</span> pour l'utilisateur (ici, votre client surfant sur votre site). Pour qu'un client passe du temps sur votre site, il se doit d'être non seulement <span class="highlight">joli</span>, mais également <span class="highlight">simple d'utilisation et instinctif</span>.</p>
+              </div>
+              </div>
+
+              <div class="servicecard" data-aos="fade-up">
+                <div class="iconcontainer" id="maintimg"></div>
+                <div class="servicecontent">
+                <h6 class="titleservicecard">MAINTENANCE</h6>
+                <p class="serviceparagraphe">Il est essentiel de maintenir son site à jour pour s'assurer de son <span class="highlight">bon fonctionnement</span> et éviter, notemment, des <span class="highlight">failles de sécurité</span>. Je propose des <span class="highlight">forfaits de maintenance</span> ou des tarifs horaires.</p>
+              </div>
+              </div>
+
+              <div class="servicecard" data-aos="fade-up">
+                <div class="iconcontainer" id="hebimg"></div>
+                <div class="servicecontent">
+                  <h6 class="titleservicecard">HOSTING</h6>
+                  <p class="serviceparagraphe">Pour fonctionner correctement, votre site doit avoir un <span class="highlight">hébergement</span> adapté aux ressources qu'il utilise. Je peux gérer votre hébergement pour vous, sur un <span class="highlight">serveur dédié</span> ou un <span class="highlight">VPN</span> adapté à vos besoins.</p>
+                </div>
+                
+              </div>
+
+              <div class="servicecard" data-aos="fade-up">
+                <div class="iconcontainer" id="seoimg"></div>
+                <div class="servicecontent">
+                <h6 class="titleservicecard">SEO</h6>
+                <p class="serviceparagraphe">
+                  Having a beautiful website is useless if no one can see it. That's what SEO (Search Engine Optimization) is for, it makes you <span class="highlight">visible</span> by <span class="highlight">improving your website's position</span> in search result pages. I can analyse your website and optimize its SEO to <span class="highlight">highlight your company</span>.
+                   </p>
+                </div>
+              </div>
+
+              <div class="servicecard" data-aos="fade-up">
+                <div class="iconcontainer" id="appimg"></div>
+                <div class="servicecontent">
+                <h6 class="titleservicecard">WEB APP DEVELOPMENT</h6>
+                <p class="serviceparagraphe">I can code for you a<span class="highlight">web application</span>, using the framework of your choice. Feel free to contact me so we can discuss your project.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="skewed project">
+              <h3 id="sectionsh3" >Comment se passe la création de votre futur site ? </h3>
+              <div class="containerg" id="projectcontainer">
+
+                <div class="projectcard" data-aos="fade-up">
+                  <img class="iconproject" src="./images/consultdark.gif"/>
+                  <div class="servicecontent">
+                  <h6 class="titleprojectcard">1- ANALYSE AND QUOTATION</h6>
+                  <p class="serviceparagraphe">We'll take the time to clarify what do you want, what are your objectives and which kind of design and style you prefer. Then with these informations, I'll make a free quotation for your project.</p>
+                  </div>
+                </div>
+                <div class="projectcard" data-aos="fade-up">
+                  <img class="iconproject" src="./images/design.gif"/>
+                  <div class="servicecontent">
+                  <h6 class="titleprojectcard">2- WEB DESIGN</h6>
+                  <p class="serviceparagraphe">Once the quotation is signed, I'll make you a first prototype so you can see what your project will look like. For this step, we'll talk/exchange emails back and forth so you can make sure the design is how you want it to be. Once I have made a prototype, I'll send you the result so you can review it and ask me for modifications if needed.</p>                
+                </div>
+                </div>
+                <div class="projectcard" data-aos="fade-up">
+                  <img class="iconproject" src="./images/pcdark.gif"/>
+                  <div class="servicecontent">
+                  <h6 class="titleprojectcard">3- CODING</h6>
+                  <p class="serviceparagraphe">Once you approve the design, I'll start building your website or app. You will have an estimation of the time this will take with your quotation in step 1, since it varies from a project to project. When I'm done, I'll write tests to make sure everything work as it should in any situation.</p>
+                </div>
+              </div>
+              <div class="projectcard" data-aos="fade-up">
+                <img class="iconproject" src="./images/confetti.gif"/>
+                <div class="servicecontent">
+                <h6 class="titleprojectcard">4- DEPLOYING</h6>
+                <p class="serviceparagraphe">There we go, your project is almost done. I'll ensure the SEO is in order if needed, and I'll publish it to the web. Finally, I will teach you how to add/modify its contents so you can make it work easily.</p>
+              </div>
+              </div>
+            </div>
+        </section>
+
+        <!-- about me Section -->
+        <section id="aboutme" >
+          <h2 id="aboutmeh2" tabindex="0">ABOUT ME</h2>
+            <br> 
+            <div id="aboutme-section" tabindex="0">
+                <div class="imgwrapper" data-aos="fade-right">
+                  <img src="images/dubai.JPG" id="imgdubai" alt="dubai">
+                </div>
+                <div id="aboutcontent" data-aos="fade-left">
+                  <p>After graduating from high school with honors, I spent the next years carving my own little corner of the world, buying my house and building infrastructure for all the animals I own, especially horses. In this time, I also perfected my english skills.</p>   
+                  <br>
+                  <p>Then, I decided to deepen my knowledge of one of my hobbies, programming. I took courses like CS50, CS50W, and so obtained a professional certificate in web devlopment from Harvard, and I am currently attending a full stack engineer cursus and a AI course.</p>
+                </div>
+            </div>
+            <div id="whatfor">
+              <div id="aboutcontent2" data-aos="fade-right">
+                <h3>What can I do for you ?</h3>
+                <p>I can do all kinds of <span class="highlight">web projets</span>, for personal and commercial use (<span class="highlight">blog</span>, <span class="highlight">portfolio</span>, <span class="highlight">showcase website</span>, <span class="highlight">ecommerce website</span>, <span class="highlight">web application</span> or <span class="highlight">other more specific development</span>).</p>   
+                <br>
+                <p>My objective is to meet my customers' needs and providing a <span class="highlight">turnkey solution</span> adapted to them. Every website I make is made to be pretty, performing, fast and convenient to use. </p>
+              </div>
+              <div class="imgwrapper" data-aos="fade-left">
+                <img src="images/dubai.JPG" id="imgdubai" alt="dubai">
+              </div>
+            </div>
+
+            <div id="skills-section">
+              <h3 id="skillstitle">Skills</h3>
+              <div id="skillsbox">
+                <div class="skills">
+                  <div class="details">
+                    <span>HTML</span>
+                    <span></span>
+                  </div>
+                  <div class="bar">
+                    <div id="html-bar"></div>
+                  </div>
+                </div>
+                <div class="skills">
+                  <div class="details">
+                    <span>CSS</span>
+                    <span></span>
+                  </div>
+                  <div class="bar">
+                    <div id="css-bar"></div>
+                  </div>
+                </div>
+                <div class="skills">
+                  <div class="details">
+                    <span>Javascript</span>
+                    <span></span>
+                  </div>
+                  <div class="bar">
+                    <div id="javascript-bar"></div>
+                  </div>
+                </div>
+                <div class="skills">
+                  <div class="details">
+                    <span>PHP</span>
+                    <span></span>
+                  </div>
+                  <div class="bar">
+                    <div id="php-bar"></div>
+                  </div>
+                </div>
+                <div class="skills">
+                  <div class="details">
+                    <span>Python</span>
+                    <span></span>
+                  </div>
+                  <div class="bar">
+                    <div id="python-bar"></div>
+                  </div>
+                </div>
+                <div class="skills">
+                  <div class="details">
+                    <span>C</span>
+                    <span></span>
+                  </div>
+                  <div class="bar">
+                    <div id="c-bar"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </section>
+
+        <section id="portfolio">
+            <h2 id="portfolioh2" tabindex="0">PORTFOLIO</h2>
+            <br>
+            <!-- Portfolio Section -->
+            <div class="container">
+              <div class="card" data-aos="fade-up">
+                <figure class="card__thumb">
+                  <img src="images/encrypt.jpg" alt="lock" class="card__image">
+                  <figcaption class="card__caption">
+                    <h2 class="card__title">AES 256/192/128</h2>
+                    <p class="card__snippet">AES encryptor and decryptor written in C. </p>
+                  </figcaption>
+                </figure>
+              </div>
+            
+              <div class="card" data-aos="fade-up">
+                <figure class="card__thumb">
+                  <img src="images/pivoine.JPG" alt="horse named pivoine" class="card__image">
+                  <figcaption class="card__caption">
+                    <h2 class="card__title">Equiplan</h2>
+                    <p class="card__snippet">Planning application to help horses owners to organize their horses' data.</p>
+                    <a href="https://equiplan.herokuapp.com/" class="card__button">Visit website</a>
+                  </figcaption>
+                </figure>
+              </div>
+
+              <div class="card" data-aos="fade-up">
+                <figure class="card__thumb">
+                  <img src="images/background.jpeg" alt="purple face" class="card__image">
+                  <figcaption class="card__caption">
+                    <h2 class="card__title">Jammming</h2>
+                    <p class="card__snippet">React application allowing the user to save playlists into their spotify account.</p>
+                    <a href="https://jamm-gm.surge.sh/" class="card__button">Visit</a>
+                  </figcaption>
+                </figure>
+              </div>
+
+              <div class="card" data-aos="fade-up">
+                <figure class="card__thumb">
+                  <img src="images/tictac.png" alt="tic tac toe" class="card__image">
+                  <figcaption class="card__caption">
+                    <h2 class="card__title">Tic tac toe</h2>
+                    <p class="card__snippet">React app of a tic tac toe game, 1 player with minimax alpha beta pruning</p>
+                    <a href="https://imaginative-lily-4f2657.netlify.app" class="card__button">Play</a>  
+                  </figcaption>
+                </figure>
+              </div>
+
+              <div class="card" data-aos="fade-up">
+                <figure class="card__thumb">
+                  <img src="images/nextproject.jpg" alt="coffee moment" class="card__image">
+                  <figcaption class="card__caption">
+                    <h2 class="card__title">Reddit client</h2>
+                    <p class="card__snippet">React front-end application using redux displaying the lastest threads on reddit</p>
+                    <a href="https://client-minireddit.netlify.app" class="card__button">Visit</a>
+                  </figcaption>
+                </figure>
+              </div>
+
+              <div class="card" data-aos="fade-up">
+                <figure class="card__thumb">
+                  <img src="images/nextproject.jpg" alt="coffee moment" class="card__image">
+                  <figcaption class="card__caption">
+                    <h2 class="card__title">Haras de Clayrel</h2>
+                    <p class="card__snippet">Professional website on WP</p>
+                    <a href="https://harasdeclayrel.com" class="card__button">Visit</a>
+                  </figcaption>
+                </figure>
+              </div>
+
+            </div>
+          </section>
+            
+          <!-- pricing Section -->
+          <section id="pricing-section">
+            <h2 id="pricingh2" tabindex="0">PRICING</h2>
+            <br>
+          </section>
+            
+          <!-- contact Section -->
+          <section id="contact-section">    
+            <h2 id="contacth2" tabindex="0">CONTACT ME</h2>
+            <h5>Feel free to contact me if you have any question.</h5>
+            <br> 
+            <div class="contact" id="contactdiv">
+              <h5 data-aos="fade-up">Gabrielle Marsallon</h5>
+              <a data-aos="fade-up" href="https://www.facebook.com/haras.declayrel.7/"> <img src="images/facebook.png" id="logofb" title="My facebook account" alt="link to facebook account"></a>
+              <br>
+              <h5 data-aos="fade-up">gabrielle.mc@outlook.fr</h5> 
+              <br>
+              <h5 data-aos="fade-up"> +33 6 50 77 70 32</h5>       
+            </div>   
+          </section>
+
+
+        <!-- Footer -->
+        <footer>
+          <div id="footersection">
+            <span class="copyright">© 2022 Gammapps, Gabrielle Marsallon, All Rights Reserved </span>
+          </div>
+        </footer>
+
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+          AOS.init({startEvent: 'keydown'});
+        </script>
+
+      </main>
+    </body>
+  </html>
