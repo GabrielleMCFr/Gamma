@@ -25,6 +25,21 @@
         <!-- jquery and js files -->
         <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous" defer></script>
         <script src="./main.js" defer></script>
+
+        <!-- Sendinblue Conversations {literal} -->
+        <script>
+          (function(d, w, c) {
+              w.SibConversationsID = '631291679ebbf674d82bf063';
+              w[c] = w[c] || function() {
+                  (w[c].q = w[c].q || []).push(arguments);
+              };
+              var s = d.createElement('script');
+              s.async = true;
+              s.src = 'https://conversations-widget.sendinblue.com/sib-conversations.js';
+              if (d.head) d.head.appendChild(s);
+          })(document, window, 'SibConversations');
+        </script>
+        <!-- /Sendinblue Conversations {/literal} -->
     </head>
 
     <body>
@@ -131,6 +146,7 @@
         <!-- services Section -->
         <section id="services-section" tabindex="0">
           <h2 id="servicesh2" tabindex="0">SERVICES</h2>
+          <div class="divider div-transparent div-arrow-down"></div>
           <h5>These are the main services offered: </h5>
             <br> 
             <div class="container">
@@ -221,10 +237,12 @@
             </div>
         </section>
 
+        <div class="separator" id="aboutscroll" tabindex="0"></div>
+
         <!-- about me Section -->
         <section id="aboutme" >
           <h2 id="aboutmeh2" tabindex="0">ABOUT ME</h2>
-            <br> 
+          <div class="divider div-transparent div-arrow-down"></div>
             <div id="aboutme-section" tabindex="0">
                 <div class="imgwrapper" data-aos="fade-right">
                   <img src="images/dubai.JPG" id="imgdubai" alt="dubai">
@@ -308,8 +326,15 @@
             </div>
         </section>
 
-        <section id="portfolio">
+        <div class="separator" id="portfoliosep"></div>
+
+        <div class="separator" id="portfolioscroll" tabindex="0"></div>
+
+        <section id="portfolio-section" tabindex="0">
+        <div id="portfolio">
             <h2 id="portfolioh2" tabindex="0">PORTFOLIO</h2>
+            <div class="divider div-transparent div-arrow-down"></div>
+            <h5 >There is a list</h5>
             <br>
             <!-- Portfolio Section -->
             <div class="container">
@@ -379,17 +404,131 @@
               </div>
 
             </div>
-          </section>
+          </div>
+        </section>
             
+        <div class="separator" id="pricingscroll" tabindex="0"></div>
+        
           <!-- pricing Section -->
-          <section id="pricing-section">
-            <h2 id="pricingh2" tabindex="0">PRICING</h2>
-            <br>
+          <section id="pricing-section" class="skewed2">
+            <div class="unskew">
+            <h2 id="pricingh2" tabindex="0">TARIFS</h2>
+            <div class="divider div-transparent div-arrow-down-pricing"></div>
+
+            <div class="row justify-content-center">
+              <div class="col-lg-4 align-self-stretch">
+                <div class="card card-1 py-4 my-4 mx-auto ">
+                  <div class="card-body">
+                    <h5 class="text-uppercase font-weight-bold mb-5 highlight"> SITE VITRINE </h5>
+                    <h5 class="center"> A PARTIR DE </h5>
+                    <h1 class="center text-uppercase price highlight"> 600€ </h1>
+                    <ul class="list-unstyled">
+                      <li class="text-uppercase py-3 card-list-item"><span class="highlight">✔</span> Developpement sous Wordpress ou développé sur mesure </li>
+                      <li class="text-uppercase py-3 card-list-item"><span class="highlight">✔</span> Web design (charte graphique, palette de couleurs, mise en page) </li>
+                      <li class="text-uppercase py-3 card-list-item"><span class="highlight">✔</span> Domaine compris pendant un an</li>
+                      <li class="text-uppercase py-3 card-list-item"><span class="highlight">✔</span> Compatible toute plateforme (pc, tablette, mobile) </li>
+                      <li class="text-uppercase py-3 card-list-item"><span class="highlight">✔</span> Formulaire de contact </li>
+                      <li class="text-uppercase py-3 card-list-item"><span class="highlight">✔</span> Mise en ligne </li>
+                      <li class="text-uppercase py-3 card-list-item"><span class="highlight">✔</span> Explications et prise en main </li>
+                      <li class="text-uppercase py-3 card-list-item border-0"><span class="highlight">+</span> Options disponibles (optimisation du référencement et des performances, hébergement, etc) </li>
+                    </ul>
+                    <button onclick="contactview()" class="center btn p-2 text-uppercase font-weight-bold price-card-button text-light">Demander un devis </button> 
+                  </div>
+                </div>
+              </div>
+  
+              <div class="col-lg-4 align-self-stretch">
+                <div class="card card-1 py-4 my-4 mx-auto">
+                  <div class="card-body">
+                    <h5 class="text-uppercase font-weight-bold mb-5 highlight"> BOUTIQUE EN LIGNE </h5>
+                    <h5 class="center"> A PARTIR DE </h5>
+                    <h1 class="center text-uppercase price highlight"> 999€ </h1>
+                    <ul class="list-unstyled">
+                      <li class="text-uppercase py-3 card-list-item"><span class="highlight">✔</span> Developpement sous Wordpress</li>
+                      <li class="text-uppercase py-3 card-list-item"><span class="highlight">✔</span> Web design (charte graphique, palette de couleurs, mise en page) </li>
+                      <li class="text-uppercase py-3 card-list-item"><span class="highlight">✔</span> Domaine compris pendant un an</li>
+                      <li class="text-uppercase py-3 card-list-item"><span class="highlight">✔</span> Compatible toute plateforme (pc, tablette, mobile) </li>
+                      <li class="text-uppercase py-3 card-list-item"><span class="highlight">✔</span> Formulaire de contact </li>
+                      <li class="text-uppercase py-3 card-list-item"><span class="highlight">✔</span> Mise en ligne </li>
+                      <li class="text-uppercase py-3 card-list-item"><span class="highlight">✔</span> Explications et prise en main </li>
+                      <li class="text-uppercase py-3 card-list-item border-0"><span class="highlight">+</span> Options disponibles (optimisation du référencement et des performances, hébergement, etc) </li>
+                    </ul>
+                    <button onclick="contactview()" class="center btn p-2 text-uppercase font-weight-bold price-card-button text-light"> Demander un devis </button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 align-self-stretch">
+                <div class="card card-1 py-4 my-4 mx-auto">
+                  <div class="card-body">
+                    <h5 class="text-uppercase font-weight-bold mb-5 highlight">WEB APPLICATION </h5>
+                    <h5 class="center"> A PARTIR DE </h5>
+                    <h1 class="center text-uppercase price highlight"> 2000€ </h1>
+                    <ul class="list-unstyled">
+                      <li class="text-uppercase py-3 card-list-item"><span class="highlight">✔</span> Développé sur mesure, utilisation du framework de votre choix </li>
+                      <li class="text-uppercase py-3 card-list-item"><span class="highlight">✔</span> Web design (charte graphique, palette de couleurs, mise en page) </li>
+                      <li class="text-uppercase py-3 card-list-item"><span class="highlight">✔</span> Domaine compris pendant un an</li>
+                      <li class="text-uppercase py-3 card-list-item"><span class="highlight">✔</span> Compatible toute plateforme (pc, tablette, mobile) </li>
+                      <li class="text-uppercase py-3 card-list-item"><span class="highlight">✔</span> Interface d'administration sur mesure</li>
+                      <li class="text-uppercase py-3 card-list-item"><span class="highlight">✔</span> Mise en ligne </li>
+                      <li class="text-uppercase py-3 card-list-item border-0"><span class="highlight">+</span> Options disponibles (optimisation du référencement et des performances, hébergement, etc) </li>
+                    </ul>
+                    <button onclick="contactview()" class="center btn p-2 text-uppercase font-weight-bold price-card-button text-light"> Demander un devis </button>
+                  </div>
+                </div>
+              </div>
+            </div>      
+        </div>
+
+        <div class="row justify-content-center">
+              <div class="col-lg-4 align-self-stretch">
+                <div class="card card-1 py-4 my-4 mx-auto ">
+                  <div class="card-body">
+                    <h5 class="text-uppercase font-weight-bold mb-5 highlight"> OPTIMISATION / SEO </h5>
+                    <h5 class="center"> A PARTIR DE </h5>
+                    <h1 class="center text-uppercase price highlight"> 250€ </h1>
+                    <ul class="list-unstyled">
+                      <li class="text-uppercase py-3 card-list-item"><span class="highlight">✔</span> Sur site préexistant</li>
+                      <li class="text-uppercase py-3 card-list-item"><span class="highlight">✔</span> Analyse de votre site</li>
+                      <li class="text-uppercase py-3 card-list-item"><span class="highlight">✔</span> Optimisation de votre référencement naturel</li>
+                      <li class="text-uppercase py-3 card-list-item"><span class="highlight">✔</span> Amélioration de votre visibilité sur les moteurs de recherche</li>
+                      <li class="text-uppercase py-3 card-list-item"><span class="highlight">✔</span> Domaine compris pendant un an</li>
+                      <li class="text-uppercase py-3 card-list-item border-0"><span class="highlight">+</span> Options disponibles (optimisation des performances, hébergement) </li>
+                    </ul>
+                    <button onclick="contactview()" class="center btn p-2 text-uppercase font-weight-bold price-card-button text-light">Demander un devis </button> 
+                  </div>
+                </div>
+              </div>
+  
+              <div class="col-lg-4 align-self-stretch">
+                <div class="card card-1 py-4 my-4 mx-auto">
+                  <div class="card-body">
+                    <h5 class="text-uppercase font-weight-bold mb-5 highlight">MAINTENANCE </h5>
+                    <h5 class="center"> <span class="highlight" style="font-size: 60px">50€</span>/MOIS OU <span class="highlight" style="font-size: 60px">35€</span>/HEURE </h5>
+                    <ul class="list-unstyled">
+                      <li class="text-uppercase py-3 card-list-item"><span class="highlight">✔</span> Optimisation de votre site</li>
+                      <li class="text-uppercase py-3 card-list-item"><span class="highlight">✔</span> Mises à jour, maintien de la sécurité </li>
+                      <li class="text-uppercase py-3 card-list-item"><span class="highlight">✔</span> Sauvegardes mensuelles et restaurations</li>
+                      <li class="text-uppercase py-3 card-list-item"><span class="highlight">✔</span> Sécurité et tranquilité</li>
+                      <li class="text-uppercase py-3 card-list-item border-0"><span class="highlight">+</span> Options disponibles (optimisation des performances, hébergement) </li>
+                    </ul>
+                    <button onclick="contactview()" class="center btn p-2 text-uppercase font-weight-bold price-card-button text-light"> Contact </button>
+                  </div>
+                </div>
+              </div>
+            </div>      
+          </div>
+        </div>      
+      </div>
+    </div>
           </section>
+
+          <div class="separator" id="contactscroll" tabindex="0"></div>
             
           <!-- contact Section -->
           <section id="contact-section">    
             <h2 id="contacth2" tabindex="0">CONTACT ME</h2>
+            <div class="divider div-transparent div-arrow-down"></div>
             <h5>Feel free to contact me if you have any question.</h5>
             <br> 
             <div class="contact" id="contactdiv">
@@ -412,7 +551,7 @@
 
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <script>
-          AOS.init({startEvent: 'keydown'});
+          AOS.init({startEvent: 'AOSEvent'});
         </script>
 
       </main>

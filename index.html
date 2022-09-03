@@ -26,15 +26,30 @@
         <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous" defer></script> 
         <script src="./main.js" defer></script>
 
+        <!-- Sendinblue Conversations {literal} -->
+        <script>
+          (function(d, w, c) {
+              w.SibConversationsID = '631291679ebbf674d82bf063';
+              w[c] = w[c] || function() {
+                  (w[c].q = w[c].q || []).push(arguments);
+              };
+              var s = d.createElement('script');
+              s.async = true;
+              s.src = 'https://conversations-widget.sendinblue.com/sib-conversations.js';
+              if (d.head) d.head.appendChild(s);
+          })(document, window, 'SibConversations');
+        </script>
+<!-- /Sendinblue Conversations {/literal} -->
+
     </head>
     
     <body>
       
       <div id="intro">
         <h1 class="glowIn" id="glowintitle">Bienvenue!</h1>
-        <p class="glowIn" id="glowinp">Création de sites web professionnels et personnels sur mesure</p>
-        <p class="glowIn" id="glowinp">Développement d'applications web</p>
-        <p class="glowIn" id="glowinp">Sélectionnez entrée ou appuyez sur n'importe quelle touche de votre clavier.</p>
+        <p class="glowIn" id="glowinp">Création de sites web professionnels et personnels</p>
+        <p class="glowIn" id="glowinp">Sites vitrine, boutiques en ligne, optimisation</p>
+        <p class="glowIn" id="glowinp">Développement d'applications</p>
         <p class="glowIn" id="glowinp">Bonne visite!</p>
         <br>
         
@@ -119,7 +134,7 @@
               <div id="title">
                 <h1>Gabrielle Marsallon</h1>
                 <h3>Développeur web</h3>
-                <h3>Création de sites web et web applications sur mesure</h3>
+                <h3>Création de sites web et web applications</h3>
                 <button id="devisbutton" onclick="contactview()" class="btn btn-warning btn-lg">Commencez votre projet</button>
               </div>
 
@@ -135,6 +150,7 @@
         <!-- services Section -->
         <section id="services-section" tabindex="0">
           <h2 id="servicesh2" tabindex="0">SERVICES</h2>
+          <div class="divider div-transparent div-arrow-down"></div>
           <h5>Voici les principaux services proposés: </h5>
             <br> 
             <div class="container">
@@ -222,14 +238,15 @@
                 <p class="serviceparagraphe">Le site étant terminé, je le mettrai en ligne, et si besoin, je vous apprendrai à vous en servir si vous souhaitez modifier des contenus régulièrement.</p>
               </div>
               </div>
-            </div>
-           
+            </div> 
         </section>
 
-        <section id="aboutme" >
+        <div class="separator" id="aboutscroll" tabindex="0"></div>
+
+         <!-- about me Section -->
+        <section id="aboutme" tabindex="0">
           <h2 id="aboutmeh2" tabindex="0">A PROPOS</h2>
-            <br> 
-            <!-- about me Section -->
+          <div class="divider div-transparent div-arrow-down"></div>
             <div id="aboutme-section" tabindex="0">
                 <div class="imgwrapper" data-aos="fade-right">
                   <img src="images/dubai.JPG" id="imgdubai" alt="dubai">
@@ -251,7 +268,7 @@
                 <p>Mon objectif est de répondre à vos besoins en vous proposant des solutions <span class="highlight">clés en main</span>, avec des sites qui soient design, moderne, fonctionnels et rapides. </p>
               </div>
               <div class="imgwrapper" data-aos="fade-left">
-                <img src="images/background1.jpg" id="imgabout" alt="Workplace and sunset">
+                <img src="images/designer2.jpg" id="imgabout" alt="Workplace and sunset">
               </div>
             </div>
 
@@ -326,12 +343,17 @@
             </div>
         </section>
 
-        <section id="portfolio-section">
+        <div class="separator" id="portfoliosep"></div>
+
+        <div class="separator" id="portfolioscroll" tabindex="0"></div>
+
+         <!-- Portfolio Section -->
+        <section id="portfolio-section" tabindex="0">
           <div id="portfolio">
-            <h2 id="portfolioh2" tabindex="0">PORTFOLIO</h2>
+            <h2 id="portfolioh2" >PORTFOLIO</h2>
+            <div class="divider div-transparent div-arrow-down"></div>
             <h5 >Voici une liste non exhaustive des projets sur lesquels j'ai travaillé.</h5>
             <br>
-            <!-- Portfolio Section -->
             <div class="container">
               <div class="card" data-aos="fade-up">
                 <figure class="card__thumb">
@@ -378,7 +400,7 @@
 
               <div class="card" data-aos="fade-up">
                 <figure class="card__thumb">
-                  <img src="images/nextproject.jpg" alt="coffee moment" class="card__image">
+                  <img src="images/tictac.png" alt="coffee moment" class="card__image">
                   <figcaption class="card__caption">
                     <h2 class="card__title">Reddit client</h2>
                     <p class="card__snippet">Application React (front-end) permettant à l'utilisateur de voir les derniers fils Reddit populaires.</p>
@@ -389,7 +411,7 @@
 
               <div class="card" data-aos="fade-up">
                 <figure class="card__thumb">
-                  <img src="images/nextproject.jpg" alt="coffee moment" class="card__image">
+                  <img src="images/tictac.png" alt="coffee moment" class="card__image">
                   <figcaption class="card__caption">
                     <h2 class="card__title">Haras de Clayrel</h2>
                     <p class="card__snippet">Site professionnel du Haras de Clayrel, élevage de chevaux miniatures américains AMHA/AMHR/ASPC.</p>
@@ -402,49 +424,152 @@
           </div>
           </section>
 
+          <div class="separator" id="pricingscroll" tabindex="0"></div>
+
           <!-- pricing Section -->
-          <section id="pricing-section">
+          <section id="pricing-section" class="skewed2">
+            <div class="unskew">
             <h2 id="pricingh2" tabindex="0">TARIFS</h2>
-            <br>
-
-            <div class="container">
-
-              <div class="col-md-4 col-lg-3 pricingcard" data-aos="fade-up">
-                <div class="servicecontent">
-                <h6 class="titleservicecard">SITE VITRINE</h6>
+            <div class="divider div-transparent div-arrow-down-pricing"></div>
+          
+            <div class="row justify-content-center">
+              <div class="col-lg-4 align-self-stretch">
+                <div class="card card-1 py-4 my-4 mx-auto ">
+                  <div class="card-body">
+                    <h5 class="text-uppercase font-weight-bold mb-5 highlight"> SITE VITRINE </h5>
+                    <h5 class="center"> A PARTIR DE </h5>
+                    <h1 class="center text-uppercase price highlight"> 600€ </h1>
+                    <ul class="list-unstyled">
+                      <li class="text-uppercase py-3 card-list-item"><span class="highlight">✔</span> Developpement sous Wordpress ou développé sur mesure </li>
+                      <li class="text-uppercase py-3 card-list-item"><span class="highlight">✔</span> Web design (charte graphique, palette de couleurs, mise en page) </li>
+                      <li class="text-uppercase py-3 card-list-item"><span class="highlight">✔</span> Domaine compris pendant un an</li>
+                      <li class="text-uppercase py-3 card-list-item"><span class="highlight">✔</span> Compatible toute plateforme (pc, tablette, mobile) </li>
+                      <li class="text-uppercase py-3 card-list-item"><span class="highlight">✔</span> Formulaire de contact </li>
+                      <li class="text-uppercase py-3 card-list-item"><span class="highlight">✔</span> Mise en ligne </li>
+                      <li class="text-uppercase py-3 card-list-item"><span class="highlight">✔</span> Explications et prise en main </li>
+                      <li class="text-uppercase py-3 card-list-item border-0"><span class="highlight">+</span> Options disponibles (optimisation du référencement et des performances, hébergement, etc) </li>
+                    </ul>
+                    <button onclick="contactview()" class="center btn p-2 text-uppercase font-weight-bold price-card-button text-light">Demander un devis </button> 
                   </div>
+                </div>
+              </div>
+  
+              <div class="col-lg-4 align-self-stretch">
+                <div class="card card-1 py-4 my-4 mx-auto">
+                  <div class="card-body">
+                    <h5 class="text-uppercase font-weight-bold mb-5 highlight"> BOUTIQUE EN LIGNE </h5>
+                    <h5 class="center"> A PARTIR DE </h5>
+                    <h1 class="center text-uppercase price highlight"> 999€ </h1>
+                    <ul class="list-unstyled">
+                      <li class="text-uppercase py-3 card-list-item"><span class="highlight">✔</span> Developpement sous Wordpress</li>
+                      <li class="text-uppercase py-3 card-list-item"><span class="highlight">✔</span> Web design (charte graphique, palette de couleurs, mise en page) </li>
+                      <li class="text-uppercase py-3 card-list-item"><span class="highlight">✔</span> Domaine compris pendant un an</li>
+                      <li class="text-uppercase py-3 card-list-item"><span class="highlight">✔</span> Compatible toute plateforme (pc, tablette, mobile) </li>
+                      <li class="text-uppercase py-3 card-list-item"><span class="highlight">✔</span> Formulaire de contact </li>
+                      <li class="text-uppercase py-3 card-list-item"><span class="highlight">✔</span> Mise en ligne </li>
+                      <li class="text-uppercase py-3 card-list-item"><span class="highlight">✔</span> Explications et prise en main </li>
+                      <li class="text-uppercase py-3 card-list-item border-0"><span class="highlight">+</span> Options disponibles (optimisation du référencement et des performances, hébergement, etc) </li>
+                    </ul>
+                    <button onclick="contactview()" class="center btn p-2 text-uppercase font-weight-bold price-card-button text-light"> Demander un devis </button>
+                  </div>
+                </div>
+              </div>
+  
+  
+              <div class="col-lg-4 align-self-stretch">
+                <div class="card card-1 py-4 my-4 mx-auto">
+                  <div class="card-body">
+                    <h5 class="text-uppercase font-weight-bold mb-5 highlight">WEB APPLICATION </h5>
+                    <h5 class="center"> A PARTIR DE </h5>
+                    <h1 class="center text-uppercase price highlight"> 2000€ </h1>
+                    <ul class="list-unstyled">
+                      <li class="text-uppercase py-3 card-list-item"><span class="highlight">✔</span> Développé sur mesure, utilisation du framework de votre choix </li>
+                      <li class="text-uppercase py-3 card-list-item"><span class="highlight">✔</span> Web design (charte graphique, palette de couleurs, mise en page) </li>
+                      <li class="text-uppercase py-3 card-list-item"><span class="highlight">✔</span> Domaine compris pendant un an</li>
+                      <li class="text-uppercase py-3 card-list-item"><span class="highlight">✔</span> Compatible toute plateforme (pc, tablette, mobile) </li>
+                      <li class="text-uppercase py-3 card-list-item"><span class="highlight">✔</span> Interface d'administration sur mesure</li>
+                      <li class="text-uppercase py-3 card-list-item"><span class="highlight">✔</span> Mise en ligne </li>
+                      <li class="text-uppercase py-3 card-list-item border-0"><span class="highlight">+</span> Options disponibles (optimisation du référencement et des performances, hébergement, etc) </li>
+                    </ul>
+                    <button onclick="contactview()" class="center btn p-2 text-uppercase font-weight-bold price-card-button text-light"> Demander un devis </button>
+                  </div>
+                </div>
+              </div>
+            </div>      
+        
+
+        <div class="row justify-content-center">
+              <div class="col-lg-4 align-self-stretch">
+                <div class="card card-1 py-4 my-4 mx-auto ">
+                  <div class="card-body">
+                    <h5 class="text-uppercase font-weight-bold mb-5 highlight"> OPTIMISATION / SEO </h5>
+                    <h5 class="center"> A PARTIR DE </h5>
+                    <h1 class="center text-uppercase price highlight"> 250€ </h1>
+                    <ul class="list-unstyled">
+                      <li class="text-uppercase py-3 card-list-item"><span class="highlight">✔</span> Sur site préexistant</li>
+                      <li class="text-uppercase py-3 card-list-item"><span class="highlight">✔</span> Analyse de votre site</li>
+                      <li class="text-uppercase py-3 card-list-item"><span class="highlight">✔</span> Optimisation de votre référencement naturel</li>
+                      <li class="text-uppercase py-3 card-list-item"><span class="highlight">✔</span> Amélioration de votre visibilité sur les moteurs de recherche</li>
+                      <li class="text-uppercase py-3 card-list-item"><span class="highlight">✔</span> Domaine compris pendant un an</li>
+                      <li class="text-uppercase py-3 card-list-item border-0"><span class="highlight">+</span> Options disponibles (optimisation des performances, hébergement) </li>
+                    </ul>
+                    <button onclick="contactview()" class="center btn p-2 text-uppercase font-weight-bold price-card-button text-light">Demander un devis </button> 
+                  </div>
+                </div>
+              </div>
+  
+              <div class="col-lg-4 align-self-stretch">
+                <div class="card card-1 py-4 my-4 mx-auto">
+                  <div class="card-body">
+                    <h5 class="text-uppercase font-weight-bold mb-5 highlight">MAINTENANCE </h5>
+                    <h5 class="center"> <span class="highlight" style="font-size: 60px">50€</span>/MOIS OU <span class="highlight" style="font-size: 60px">35€</span>/HEURE </h5>
+                    <ul class="list-unstyled">
+                      <li class="text-uppercase py-3 card-list-item"><span class="highlight">✔</span> Optimisation de votre site</li>
+                      <li class="text-uppercase py-3 card-list-item"><span class="highlight">✔</span> Mises à jour, maintien de la sécurité </li>
+                      <li class="text-uppercase py-3 card-list-item"><span class="highlight">✔</span> Sauvegardes mensuelles et restaurations</li>
+                      <li class="text-uppercase py-3 card-list-item"><span class="highlight">✔</span> Sécurité et tranquilité</li>
+                      <li class="text-uppercase py-3 card-list-item border-0"><span class="highlight">+</span> Options disponibles (optimisation des performances, hébergement) </li>
+                    </ul>
+                    <button onclick="contactview()" class="center btn p-2 text-uppercase font-weight-bold price-card-button text-light"> Contact </button>
+                  </div>
+                </div>
               </div>
 
-              <div class="col-md-4 col-lg-3 pricingcard" data-aos="fade-up">
-                <div class="servicecontent">
-                <h6 class="titleservicecard">BOUTIQUE EN LIGNE</h6>
+              <div class="col-lg-4 align-self-stretch">
+                <div class="card card-1 py-4 my-4 mx-auto">
+                  <div class="card-body">
+                    <h5 class="text-uppercase font-weight-bold mb-5 highlight"> DEVELOPPEMENT SPECIFIQUE </h5>
+                    <h5 class="center"> SUR DEVIS </h5>
+                    <button onclick="contactview()" class="center btn p-2 text-uppercase font-weight-bold price-card-button text-light"> Demander un devis </button>
                   </div>
+                </div>
               </div>
-
-              <div class="col-md-4 col-lg-3 pricingcard" data-aos="fade-up">
-                <div class="servicecontent">
-                  <h6 class="titleservicecard">DEVELOPPEMENT APP</h6>
-                  </div>
-                
-              </div>
-            </div>
+            </div>    
+        </div>    
+        </div>      
+    </div></div>
           </section>
+
+          <div class="separator" id="contactscroll" tabindex="0"></div>
             
           <!-- contact Section -->
-          <section id="contact-section" >    
-            <h2 id="contacth2" tabindex="0">ME CONTACTER</h2>
-            <h5>N'hésitez pas à me contacter pour toute question ou devis</h5>
+          <section id="contact-section" tabindex="0">    
+            <h2 id="contacth2" >ME CONTACTER</h2>
+            <div class="divider div-transparent div-arrow-down"></div>
+            <h5>N'hésitez pas à me contacter pour toute question ou devis.</h5>
+            <h5>Vous pouvez le faire via le chat en bas à droite, le formulaire de contact ci-dessous, téléphone, email ou via les réseaux sociaux.</h5>
             <br> 
-            <div class="contact" id="contactdiv">
-              <h5 data-aos="fade-up">Gabrielle Marsallon</h5>
-              <a data-aos="fade-up"href="https://www.facebook.com/haras.declayrel.7/"> <img src="images/facebook.png" id="logofb" title="My facebook account" alt="link to facebook account"></a>
+            <div class="contact" id="contactdiv" data-aos="fade-up">
+              <h5 >Gabrielle Marsallon</h5>
+              <a href="https://www.facebook.com/haras.declayrel.7/"> <img src="images/facebook.png" id="logofb" title="My facebook account" alt="link to facebook account"></a>
               <br>
-              <h5 data-aos="fade-up">gabrielle.mc@outlook.fr</h5> 
+              <h5>gabrielle.mc@outlook.fr</h5> 
               <br>
-              <h5 data-aos="fade-up">06 50 77 70 32</h5>       
+              <h5>06 50 77 70 32</h5>       
             </div>   
           </section>
 
+          <div class="separator" ></div>
 
         <!-- Footer -->
         <footer>
@@ -456,7 +581,8 @@
       </main>
       <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
       <script>
-        AOS.init({startEvent: 'keydown'});
+        
+        AOS.init({startEvent: 'AOSEvent'});
       </script>
     </body>
   </html>

@@ -1,5 +1,4 @@
 
-
 document.addEventListener('DOMContentLoaded', function() {
     // display main to none
     document.querySelector('main').style.display = "none";
@@ -36,8 +35,6 @@ document.addEventListener('DOMContentLoaded', function() {
         threshold: 1.0
       }
 
-    //document.addEventListener('keydown', startview);
-
     let skillsbox = document.getElementById('html-bar');
     let observer = new IntersectionObserver(skillobserver, options);
     observer.observe(skillsbox);
@@ -51,12 +48,10 @@ document.addEventListener('DOMContentLoaded', function() {
     observer3.observe(contactanimateddiv); */
 
 
-    
-
-    
+    document.addEventListener('keydown', startview);
 
     // handle navbar desktop version
-    //const navbar = document.getElementById('navbarhome');
+    const navbar = document.getElementById('navbarhome');
 
     /*window.addEventListener('scroll', function() {
        
@@ -109,7 +104,7 @@ function homeview() {
 
 function servicesview() {
 
-    /*let contactsection = document.getElementById('contact-section');
+    let contactsection = document.getElementById('contact-section');
     let aboutme = document.getElementById('aboutme');
     let portfolio = document.getElementById('portfolio');
     let pricingsection = document.getElementById('pricing-section');
@@ -119,7 +114,7 @@ function servicesview() {
     aboutme.style.display = "none";
     portfolio.style.display = "none";
     servicessection.style.display = "block";
-    pricingsection.style.display = "none";*/
+    pricingsection.style.display = "none";
 
     window.scroll(0, window.innerHeight - 40)
 
@@ -140,7 +135,7 @@ function servicesview() {
 
 function pricingview() {
 
-    /*let contactsection = document.getElementById('contact-section');
+    let contactsection = document.getElementById('contact-section');
     let aboutme = document.getElementById('aboutme');
     let portfolio = document.getElementById('portfolio');
     let pricingsection = document.getElementById('pricing-section');
@@ -154,7 +149,7 @@ function pricingview() {
 
     window.scroll(0, window.innerHeight - 40)
 
-    
+    /*
 
     if (window.screen.width < 720 && window.screen.width >= 470) {
         window.scroll(0, 350);
@@ -167,8 +162,6 @@ function pricingview() {
     }
 
     */
-
-    document.getElementById('pricingscroll').scrollIntoView()
 
 }
 
@@ -188,9 +181,7 @@ function startview() {
             document.getElementById('pricing-section').style.display = 'block';
             document.getElementById('services-section').style.display = 'block';
             document.getElementById('aboutme').style.display = "block";
-            document.getElementById('portfolio').style.display = "block";  
-            // dispatch event who initiates AOS
-            document.dispatchEvent(new Event('AOSEvent')) 
+            document.getElementById('portfolio').style.display = "block";   
         },500) 
     }, 500)   
 }
@@ -198,7 +189,7 @@ function startview() {
 
 function contactview() {
 
-    /*let contactsection = document.getElementById('contact-section');
+    let contactsection = document.getElementById('contact-section');
     let aboutme = document.getElementById('aboutme');
     let portfolio = document.getElementById('portfolio');
     let pricingsection = document.getElementById('pricing-section');
@@ -210,11 +201,9 @@ function contactview() {
     servicessection.style.display = "none";
     pricingsection.style.display = "none";
 
-    window.scroll(0, window.innerHeight - 40)*/
+    //document.getElementById('contacth2').focus({preventScroll:false});
 
-    document.getElementById('contactscroll').scrollIntoView()
-
-    
+    window.scroll(0, window.innerHeight - 40)
 
     /*
 
@@ -235,7 +224,6 @@ function contactview() {
 
 
 function portfolioview() {
-    /*
     let contactsection = document.getElementById('contact-section');
     let aboutme = document.getElementById('aboutme');
     let portfolio = document.getElementById('portfolio');
@@ -250,9 +238,9 @@ function portfolioview() {
 
     window.scroll(0, window.innerHeight - 40)
 
-    
+    /*
 
-    //
+    //document.getElementById('portfolioh2').focus({preventScroll:false});
     if (window.screen.width < 720 && window.screen.width >= 470) {
         window.scroll(0, 350);
     }
@@ -264,12 +252,11 @@ function portfolioview() {
     }
 
     */
-    document.getElementById('portfolioscroll').scrollIntoView()
 
 }
 
 function aboutview() {
-    /*
+
 
     let contactsection = document.getElementById('contact-section');
     let aboutme = document.getElementById('aboutme');
@@ -285,7 +272,7 @@ function aboutview() {
 
     window.scroll(0, window.innerHeight - 40)
 
-    
+    /*
 
     if (window.screen.width < 720 && window.screen.width >= 470) {
         window.scroll(0, 350);
@@ -296,11 +283,11 @@ function aboutview() {
     else {
         window.scroll(0, 690);
     }
+    //$("#aboutmeth2").focus();
     
     */
-    document.getElementById('aboutscroll').scrollIntoView()
+
     //document.getElementById('aboutme-section').style.animationPlayState = 'running';
-    
 
 }
 
