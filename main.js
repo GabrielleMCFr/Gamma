@@ -1,5 +1,3 @@
-
-
 document.addEventListener('DOMContentLoaded', function() {
     // display main to none
     document.querySelector('main').style.display = "none";
@@ -43,55 +41,77 @@ document.addEventListener('DOMContentLoaded', function() {
     let observer = new IntersectionObserver(skillobserver, options);
     observer.observe(skillsbox);
 
-    /*let observer2 = new IntersectionObserver(aboutobserver, options);
-    let aboutdiv = document.getElementById('imgdubai');
-    observer2.observe(aboutdiv)
-
-    let observer3 = new IntersectionObserver(contactobserver, options);
-    let contactanimateddiv = document.getElementById('contacth2');
-    observer3.observe(contactanimateddiv); */
-
-
-    
-
-    
-
-    // handle navbar desktop version
-    //const navbar = document.getElementById('navbarhome');
-
-    /*window.addEventListener('scroll', function() {
-       
-        if (window.scrollY > 420) {
-            navbar.classList.add('bg-dark');
-
-        }
-        else {
-            navbar.classList.remove('bg-dark');
-        }
-    });*/
-
-    /* handle navbar mobile version -plus besoin, mise en bg dark direct.
-    const navbar2 = document.getElementById('navbarmobile');
-
-    window.addEventListener('scroll', function() {
-       
-        if (window.scrollY > 420) {
-            navbar2.classList.add('bg-dark');
-        }
-        else {
-            navbar2.classList.remove('bg-dark');
-        }
-    }); */
-
     document.getElementById('contactnav').addEventListener('click', contactview);
     document.getElementById('portfolionav').addEventListener('click', portfolioview);
     document.getElementById('aboutmenav').addEventListener('click', aboutview);
     document.getElementById('homenav').addEventListener('click', homeview);
     document.getElementById('servicesnav').addEventListener('click', servicesview);
     document.getElementById('pricingnav').addEventListener('click', pricingview);
+    
+    // handle form API
+    document.getElementById('contactForm').onsubmit = function(e) {
+        e.preventDefault();
+
+        // erase previous messages
+        document.getElementById('form-message-success').style.display = 'none'
+        document.getElementById('form-message-warning').style.display = 'none'
+        let form = document.getElementById('contactForm');
+
+        const key = "$$$$$$"
+        const name = form.querySelector('#name').value;
+        const email = form.querySelector('#email').value;
+        const subject = form.querySelector('#subject').value;
+        const message = form.querySelector('#message').value;
+
+        /*let emailReg = new RegExp(/^([w-.]+)@((?:[w]+.)+)([a-zA-Z]{2,4})/i);
+
+        if (!emailReg.test(email)) {
+            document.getElementById('form-message-warning').innerHTML = "Adresse email non valide.";
+            document.getElementById('form-message-warning').focus({preventScroll:false});
+        }*/
+
+        if (name.length <= 0 || email.length <= 0 || subject.length <= 0 || message.length <= 0) {
+            document.getElementById('form-message-warning').innerHTML = "Tous les champs doivent être renseignés.";
+            document.getElementById('form-message-warning').focus({preventScroll:false});
+        }
 
 
+
+        fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            headers: {
+                "Content-Type": "application/json",
+                Accept: "application/json",
+              },
+            body: JSON.stringify({
+                access_key: key,
+                name: name,
+                email: email,
+                subject: subject,
+                message: message
+            })
+        })
+        .then(async (response) => {
+            if (response.status == 200) {
+            
+              document.getElementById('form-message-success').style.display = 'block';
+            } else {
+              console.log(response);
+            }
+          })
+          .catch((error) => {
+            console.log(error); 
+            document.getElementById('form-message-warning').innerHTML = "Une erreur s'est produite. Veuillez vérifier les informations que vous avez saisies."
+            document.getElementById('form-message-warning').focus({preventScroll:false}) 
+          })
+          .then(function () {
+            form.reset();
+          });
+    }
 });
+
+
+
 function homeview() {
     let contactsection = document.getElementById('contact-section');
     let aboutme = document.getElementById('aboutme');
@@ -109,68 +129,12 @@ function homeview() {
 }
 
 function servicesview() {
-
-    /*let contactsection = document.getElementById('contact-section');
-    let aboutme = document.getElementById('aboutme');
-    let portfolio = document.getElementById('portfolio');
-    let pricingsection = document.getElementById('pricing-section');
-    let servicessection = document.getElementById('services-section');
-
-    contactsection.style.display = "none";
-    aboutme.style.display = "none";
-    portfolio.style.display = "none";
-    servicessection.style.display = "block";
-    pricingsection.style.display = "none";*/
-
     window.scroll(0, window.innerHeight - 40)
-
-    /*
-
-    if (window.screen.width < 720 && window.screen.width >= 470) {
-        window.scroll(0, 350);
-    }
-    else if (window.screen.width < 470) {
-        window.scroll(0, 280);
-    }
-    else {
-        window.scroll(0, 690);
-    }
-    */
 }
 
 
 function pricingview() {
-
-    /*let contactsection = document.getElementById('contact-section');
-    let aboutme = document.getElementById('aboutme');
-    let portfolio = document.getElementById('portfolio');
-    let pricingsection = document.getElementById('pricing-section');
-    let servicessection = document.getElementById('services-section');
-
-    contactsection.style.display = "none";
-    aboutme.style.display = "none";
-    portfolio.style.display = "none";
-    servicessection.style.display = "none";
-    pricingsection.style.display = "block";
-
-    window.scroll(0, window.innerHeight - 40)
-
-    
-
-    if (window.screen.width < 720 && window.screen.width >= 470) {
-        window.scroll(0, 350);
-    }
-    else if (window.screen.width < 470) {
-        window.scroll(0, 280);
-    }
-    else {
-        window.scroll(0, 690);
-    }
-
-    */
-
     document.getElementById('pricingscroll').scrollIntoView()
-
 }
 
 
@@ -196,115 +160,17 @@ function startview() {
     }, 500)   
 }
 
-
 function contactview() {
-
-    /*let contactsection = document.getElementById('contact-section');
-    let aboutme = document.getElementById('aboutme');
-    let portfolio = document.getElementById('portfolio');
-    let pricingsection = document.getElementById('pricing-section');
-    let servicessection = document.getElementById('services-section');
-
-    contactsection.style.display = "block";
-    aboutme.style.display = "none";
-    portfolio.style.display = "none";
-    servicessection.style.display = "none";
-    pricingsection.style.display = "none";
-
-    window.scroll(0, window.innerHeight - 40)*/
-
     document.getElementById('contactscroll').scrollIntoView()
-
-    
-
-    /*
-
-    if (window.screen.width < 720 && window.screen.width >= 470) {
-        window.scroll(0, 350);
-    }
-    else if (window.screen.width < 470) {
-        window.scroll(0, 280);
-    }
-    else {
-        window.scroll(0, 690);
-    }
-    */
-    //document.getElementById('contactdiv').style.animationPlayState = 'running';
-
-    
 }
 
-
 function portfolioview() {
-    /*
-    let contactsection = document.getElementById('contact-section');
-    let aboutme = document.getElementById('aboutme');
-    let portfolio = document.getElementById('portfolio');
-    let pricingsection = document.getElementById('pricing-section');
-    let servicessection = document.getElementById('services-section');
-
-    aboutme.style.display = "none";
-    contactsection.style.display = "none";
-    portfolio.style.display = "block";
-    pricingsection.style.display = "none";
-    servicessection.style.display = "none";
-
-    window.scroll(0, window.innerHeight - 40)
-
-    
-
-    //
-    if (window.screen.width < 720 && window.screen.width >= 470) {
-        window.scroll(0, 350);
-    }
-    else if (window.screen.width < 470) {
-        window.scroll(0, 280);
-    }
-    else {
-        window.scroll(0, 690);
-    }
-
-    */
     document.getElementById('portfolioscroll').scrollIntoView()
-
 }
 
 function aboutview() {
-    /*
-
-    let contactsection = document.getElementById('contact-section');
-    let aboutme = document.getElementById('aboutme');
-    let portfolio = document.getElementById('portfolio');
-    let pricingsection = document.getElementById('pricing-section');
-    let servicessection = document.getElementById('services-section');
-
-    aboutme.style.display = "block";
-    contactsection.style.display = "none";
-    portfolio.style.display = "none";
-    pricingsection.style.display = "none";
-    servicessection.style.display = "none";
-
-    window.scroll(0, window.innerHeight - 40)
-
-    
-
-    if (window.screen.width < 720 && window.screen.width >= 470) {
-        window.scroll(0, 350);
-    }
-    else if (window.screen.width < 470) {
-        window.scroll(0, 280);
-    }
-    else {
-        window.scroll(0, 690);
-    }
-    
-    */
-    document.getElementById('aboutscroll').scrollIntoView()
-    //document.getElementById('aboutme-section').style.animationPlayState = 'running';
-    
-
+    document.getElementById('aboutscroll').scrollIntoView();
 }
-
 
 function skillobserver(entries, observer) {
     let prevRatio = 0.0;
@@ -319,22 +185,3 @@ function skillobserver(entries, observer) {
       });
 }
 
-function aboutobserver(entries, observer) {
-    let prevRatio = 0.0;
-    entries.forEach((entry) => {
-        if (entry.intersectionRatio > prevRatio) {
-            document.getElementById('aboutme-section').style.animationPlayState = 'running';
-        } 
-        prevRatio = entry.intersectionRatio;
-      });
-}
-
-function contactobserver(entries, observer) {
-    let prevRatio = 0.0;
-    entries.forEach((entry) => {
-        if (entry.intersectionRatio > prevRatio) {
-            document.getElementById('contactdiv').style.animationPlayState = 'running';
-        } 
-        prevRatio = entry.intersectionRatio;
-      });
-}

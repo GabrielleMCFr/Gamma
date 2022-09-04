@@ -621,17 +621,18 @@
                         <div id="form-message-warning" class="mb-4"></div>
                         <div id="form-message-success" class="mb-4"> Votre message a bien été envoyé, vous aurez une réponse dans les plus brefs délai !</div>
                         <form method="POST" id="contactForm" name="contactForm" class="contactForm">
+                          
                           <div class="row">
                             <div class="col-md-6">
                               <div class="form-group">
                                 <label class="label" for="name">Nom</label>
-                                  <input type="text" class="form-control" name="name" id="name" placeholder="Nom">
+                                  <input type="text" class="form-control" name="name" id="name" placeholder="Nom" required>
                               </div>
                             </div>
                           <div class="col-md-6">
                             <div class="form-group">
                               <label class="label" for="email">Adresse email</label>
-                              <input type="email" class="form-control" name="email" id="email" placeholder="Email">
+                              <input type="email" class="form-control" name="email" id="email" placeholder="Email" required>
                             </div>
                           </div>
                           <div class="col-md-12">
@@ -643,7 +644,7 @@
                           <div class="col-md-12">
                             <div class="form-group">
                               <label class="label" for="#">Message</label>
-                              <textarea name="message" class="form-control" id="message" cols="30" rows="4" placeholder="Message"></textarea>
+                              <textarea name="message" class="form-control" id="message" cols="30" rows="4" placeholder="Message" required></textarea>
                             </div>
                           </div>
                           <div class="col-md-12">
@@ -664,45 +665,21 @@
             </div>
           </div>
         </div>
+      </section>
 
-            <form action="form.php" method="post" id="contact-form">
-              <h2>Contact us</h2>
-               
-              <p>
-                <label>First Name:</label>
-                <input name="name" type="text" value="dima"/>
-              </p>
-              <p>
-                <label>Email Address:</label>
-                <input style="cursor: pointer;" name="email" value="dima@dima.com" type="text"/>
-              </p>
-              <p>
-                <label>Message:</label>
-                <textarea name="message">dima</textarea>
-              </p>
-              <p>
-                <input type="submit" value="Send"/>
-              </p>
-            </form>
-          </section>
+      <div class="separator" ></div>
 
-          <div class="separator" ></div>
+      <!-- Footer -->
+      <footer>
+        <div id="footersection">
+          <span class="copyright">© 2022 Gammapps, Gabrielle Marsallon, All Rights Reserved </span>
+        </div>
+      </footer>
 
-        <!-- Footer -->
-        <footer>
-          <div id="footersection">
-            <span class="copyright">© 2022 Gammapps, Gabrielle Marsallon, All Rights Reserved </span>
-          </div>
-        </footer>
-
-      </main>
-      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-      <script>
-        
+    </main>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script> 
         AOS.init({startEvent: 'AOSEvent'});
-      </script>
-
-
-
-    </body>
-  </html>
+    </script>
+  </body>
+</html>
