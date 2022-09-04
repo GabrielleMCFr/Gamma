@@ -103,13 +103,17 @@ header h3 {
     margin-top: 2rem !important;
     font-size : 2rem !important; 
     font-weight: 500 !important;
-    background-color: orange;
-    border-color: orange;
+    border-color: rgb(255, 132, 0);
+    color: rgb(255, 132, 0);
     box-shadow: 0 0 10px #09090c;
+    text-shadow: 0 0 10px #09090c;
+    
 }
 
 #devisbutton:hover {
-    background-color: rgb(255, 207, 17);
+    background-color: rgb(255, 132, 0);
+    color: black;
+    text-shadow: none;
 }
 
 header .content {
@@ -175,7 +179,7 @@ header .content nav {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    margin-top: 8rem;
+    margin-top: 12rem;
     justify-content: center;
 }
 
@@ -236,7 +240,7 @@ header .content a {
         flex-direction: column;
         align-items: center;
         text-align: center;
-        margin-top: 2rem;
+        margin-top: 12rem;
         justify-content: center;
         font-size: 3rem;
     } 
@@ -1162,3 +1166,36 @@ footer {
 	border-right: 1px solid rgb(48,49,51);
 }
 
+/* contact section */
+
+.iconcontactcontainer {
+
+    opacity: 100%;
+    text-align: center;
+    min-width: 6rem;
+    height: 6rem;
+    z-index: 10;
+}
+
+#contactimg {
+    background-image: url('./images/nextproject.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#submitform {
+    background-color: rgb(255, 132, 0);
+    border-color: rgb(255, 132, 0);
+    margin-top: 2rem;
+}
+
+.socialmedia-button {
+    background-color: rgb(255, 132, 0);
+    border-color: rgb(255, 132, 0);
+    height: 1rem;
+    width: 1rem;
+    border-radius: 10%;
+    margin-top: 1rem;
+    padding: 0 0.3rem 0.2rem 0.3rem;
+    color: white
+}

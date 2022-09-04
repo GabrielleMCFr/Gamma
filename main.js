@@ -3,6 +3,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     // display main to none
     document.querySelector('main').style.display = "none";
+    document.getElementById('form-message-success').style.display = 'none'
 
     // intro glowin text animation.
     // hide them to let time to the settimeout function to work out
