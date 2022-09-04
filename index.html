@@ -567,6 +567,25 @@
               <br>
               <h5>06 50 77 70 32</h5>       
             </div>   
+            <form action="form.php" method="post" id="contact-form">
+              <h2>Contact us</h2>
+               
+              <p>
+                <label>First Name:</label>
+                <input name="name" type="text" value="dima"/>
+              </p>
+              <p>
+                <label>Email Address:</label>
+                <input style="cursor: pointer;" name="email" value="dima@dima.com" type="text"/>
+              </p>
+              <p>
+                <label>Message:</label>
+                <textarea name="message">dima</textarea>
+              </p>
+              <p>
+                <input type="submit" value="Send"/>
+              </p>
+            </form>
           </section>
 
           <div class="separator" ></div>
@@ -584,5 +603,8 @@
         
         AOS.init({startEvent: 'AOSEvent'});
       </script>
+
+
+
     </body>
   </html>
