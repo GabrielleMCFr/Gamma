@@ -57,25 +57,27 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('form-message-warning').style.display = 'none'
         let form = document.getElementById('contactForm');
 
-        const key = "$$$$$$"
+        const key = "49625270-69fb-486a-95b1-69b41df0f869";
         const name = form.querySelector('#name').value;
         const email = form.querySelector('#email').value;
         const subject = form.querySelector('#subject').value;
         const message = form.querySelector('#message').value;
 
-        /*let emailReg = new RegExp(/^([w-.]+)@((?:[w]+.)+)([a-zA-Z]{2,4})/i);
+        //let emailReg = new RegExp(^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$);
 
-        if (!emailReg.test(email)) {
-            document.getElementById('form-message-warning').innerHTML = "Adresse email non valide.";
-            document.getElementById('form-message-warning').focus({preventScroll:false});
-        }*/
-
-        if (name.length <= 0 || email.length <= 0 || subject.length <= 0 || message.length <= 0) {
-            document.getElementById('form-message-warning').innerHTML = "Tous les champs doivent être renseignés.";
-            document.getElementById('form-message-warning').focus({preventScroll:false});
+        if (!ValidateEmail(email) || (name.length <= 0 || email.length <= 0 || subject.length <= 0 || message.length <= 0)) {
+            if (name.length <= 0 || email.length <= 0 || subject.length <= 0 || message.length <= 0) {
+                document.getElementById('form-message-warning').innerHTML = "Tous les champs doivent être renseignés.";
+                document.getElementById('form-message-warning').focus({preventScroll:false});
+            }
+            if (!ValidateEmail(email)) {
+                document.getElementById('form-message-warning').innerHTML = "Adresse email non valide.";
+                document.getElementById('form-message-warning').focus({preventScroll:false});
+            }
+            
         }
 
-
+        else {
 
         fetch('https://api.web3forms.com/submit', {
             method: 'POST',
@@ -108,11 +110,29 @@ document.addEventListener('DOMContentLoaded', function() {
             form.reset();
           });
     }
+}
 });
+
+function ValidateEmail(mail) 
+{
+ if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail))
+  {
+    return true
+  }
+
+    return false
+}
+
 
 
 
 function homeview() {
+    // make menu toggle when you click on a navlink if it's mobile mode
+    if (window.innerWidth <= 950) {
+        document.getElementById('mobiletogglemenu').checked = false
+    }
+    
+
     let contactsection = document.getElementById('contact-section');
     let aboutme = document.getElementById('aboutme');
     let portfolio = document.getElementById('portfolio');
@@ -126,14 +146,22 @@ function homeview() {
     pricingsection.style.display = "block";
 
     window.scroll(0, 0)
+
+    
 }
 
 function servicesview() {
+    if (window.innerWidth <= 950) {
+        document.getElementById('mobiletogglemenu').checked = false
+    }
     window.scroll(0, window.innerHeight - 40)
 }
 
 
 function pricingview() {
+    if (window.innerWidth <= 950) {
+        document.getElementById('mobiletogglemenu').checked = false
+    }
     document.getElementById('pricingscroll').scrollIntoView()
 }
 
@@ -144,7 +172,6 @@ function startview() {
 
     setTimeout(function() {
         document.querySelector('#intro').style.display = "none";
-        document.removeEventListener('keydown', startview);
         setTimeout(function() {
             document.querySelector('main').style.display = "block";
             document.querySelector('main').style.animationPlayState = 'running';
@@ -161,14 +188,23 @@ function startview() {
 }
 
 function contactview() {
+    if (window.innerWidth <= 950) {
+        document.getElementById('mobiletogglemenu').checked = false
+    }
     document.getElementById('contactscroll').scrollIntoView()
 }
 
 function portfolioview() {
+    if (window.innerWidth <= 950) {
+        document.getElementById('mobiletogglemenu').checked = false
+    }
     document.getElementById('portfolioscroll').scrollIntoView()
 }
 
 function aboutview() {
+    if (window.innerWidth <= 950) {
+        document.getElementById('mobiletogglemenu').checked = false
+    }
     document.getElementById('aboutscroll').scrollIntoView();
 }
 

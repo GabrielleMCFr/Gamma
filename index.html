@@ -11,17 +11,22 @@
         <link rel="stylesheet" href="./glow.css">
         <link rel="stylesheet" href="./portfoliocss.css">
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
 
         <!-- google fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Antic+Slab&family=Cinzel:wght@700&family=Dancing+Script&family=Gideon+Roman&family=Manrope:wght@200;300;400;500;600;700&family=Poiret+One&family=Quicksand:wght@400;500;600;700&family=Satisfy&display=swap" rel="stylesheet">      
-        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&display=swap" rel="stylesheet">      
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
 
         <!-- meta -->
         <meta charset="UTF-8">
         <meta name="viewport" content="initial-scale=1, width=device-width">
-      
+
+        <!-- if js not enabled -->
+        <noscript><meta http-equiv="refresh" content="1;error.html"></noscript>
+
         <!-- jquery and js files -->
         <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous" defer></script> 
         <script src="./main.js" defer></script>
@@ -39,8 +44,7 @@
               if (d.head) d.head.appendChild(s);
           })(document, window, 'SibConversations');
         </script>
-<!-- /Sendinblue Conversations {/literal} -->
-
+        <!-- /Sendinblue Conversations {/literal} -->
     </head>
     
     <body>
@@ -48,7 +52,7 @@
       <div id="intro">
         <h1 class="glowIn" id="glowintitle">Bienvenue!</h1>
         <p class="glowIn" id="glowinp">Création de sites web professionnels et personnels</p>
-        <p class="glowIn" id="glowinp">Sites vitrine, boutiques en ligne, optimisation</p>
+        <p class="glowIn" id="glowinp">Sites vitrine, boutiques en ligne, optimisation du référencement et des performances</p>
         <p class="glowIn" id="glowinp">Développement d'applications</p>
         <p class="glowIn" id="glowinp">Bonne visite!</p>
         <br>
@@ -97,7 +101,7 @@
                     <nav class="mobile navbar fixed-top bg-dark" id="navbarmobile2">
                       <ul>
                         <div id="menuToggle">
-                          <input type="checkbox" />
+                          <input type="checkbox" id="mobiletogglemenu"/>
                             <span></span>
                             <span></span>
                             <span></span>
@@ -132,16 +136,18 @@
               
 
               <div id="title">
-                <h1>Gabrielle Marsallon</h1>
-                <h3>Développeur web</h3>
-                <h3>Création de sites web et web applications</h3>
-                <button id="devisbutton" onclick="contactview()" class="btn btn btn-outline-warning btn-lg">Commencez votre projet</button>
+                <h1 data-aos="zoom-in-down" data-aos-duration="3000">Gabrielle Marsallon</h1>
+                <h3 data-aos="zoom-in" data-aos-duration="3000">Développeur web</h3>
+                <h3 data-aos="zoom-in" data-aos-duration="3000">Création de sites web et web applications</h3>
+                <button id="devisbutton" onclick="contactview()" class="btn btn btn-outline-warning btn-lg" data-aos="zoom-in" data-aos-duration="3000">Discutons de votre projet</button>
+                <button id="scrollarrow" onclick="servicesview()"></button>
               </div>
 
               <div id="mobiletitle">
                 <h1>Gabrielle Marsallon</h1>
                 <h3>Développeur web</h3>
-                <button id="devisbutton" onclick="contactview()" class="btn btn btn-outline-warning btn-sm">Commencez votre projet</button>
+                <button id="devisbutton" onclick="contactview()" class="btn btn btn-outline-warning btn-sm">Discutons de votre projet</button>
+                <button id="scrollarrow" onclick="servicesview()"></button>
               </div>
             </div>
           </header>     
@@ -211,14 +217,14 @@
               <div class="containerg" id="projectcontainer">
 
                 <div class="projectcard" data-aos="fade-up">
-                  <img class="iconproject" src="./images/consultdark.gif"/>
+                  <img class="iconproject" src="./images/consultd.gif"/>
                   <div class="servicecontent">
                   <h6 class="titleprojectcard">1- ANALYSE ET DEVIS</h6>
                   <p class="serviceparagraphe">Nous prendrons le temps de discuter pour bien définir ce que vous voulez, vos goûts et vos objectifs. A l'issue de cette discussion, je ferai un devis gratuit que vous pourrez accepter ou refuser.</p>
                   </div>
                 </div>
                 <div class="projectcard" data-aos="fade-up">
-                  <img class="iconproject" src="./images/design.gif"/>
+                  <img class="iconproject" src="./images/editg.gif"/>
                   <div class="servicecontent">
                   <h6 class="titleprojectcard">2- WEB DESIGN</h6>
                   <p class="serviceparagraphe">Une fois le devis accepté, je ferai un premier prototype pour que vous puissiez voir à quoi votre projet ressemblera. Cette étape s'effectue avec des échanges entre vous et moi : une fois réalisé, je vous soumets le résultat pour que vous puissiez contrôler si cela vous convient, ou me donner la liste de choses à modifier, jusqu'à ce que vous soyez satisfait. Une fois le prototype accepté, je commencerai le développement.</p>                
@@ -253,11 +259,10 @@
                 </div>
                 <div id="aboutcontent" data-aos="fade-left">
                   <h3>Qui suis-je ?</h3>
-                  <p>Je m'appelle Gabrielle Marsallon, je suis <span class="highlight">développeuse web</span>.</p>   
+                  <p>Je m'appelle Gabrielle Marsallon, je suis <span class="highlight">développeur web</span>.</p>   
                   <br>
-                  <p>Après un bac S, j'ai décidé de consacrer quelques années à l'une de mes passion, l'équitation et les chevaux en général. J'ai ensuite créé un élevage. Une fois les gros des travaux terminés, j'ai décidé d'approfondir mes connaissances concernant l'un de mes loisirs, la programmation. J'ai suivi les cours CS50, CS50W et CS50AI à Harvard, j'ai obtenu un certificat professionnel en développement web, puis j'ai continué avec une formation online en developpement front end.</p>
+                  <p>Après un bac S, j'ai décidé de consacrer quelques années à l'une de mes passion, l'équitation et les chevaux en général. J'ai ensuite créé un élevage. Une fois le gros des travaux terminés, j'ai décidé d'approfondir mes connaissances concernant l'un de mes loisirs, la programmation. J'ai suivi les cours CS50, CS50W et CS50AI à Harvard, j'ai obtenu un certificat professionnel en développement web, puis j'ai continué avec une formation online en developpement front end.</p>
                 </div>
-                
             </div>
 
             <div id="whatfor">
@@ -357,7 +362,7 @@
             <div class="container">
               <div class="card" data-aos="fade-up">
                 <figure class="card__thumb">
-                  <img src="images/encrypt.jpg" alt="lock" class="card__image">
+                  <img src="images/it-security.jpeg" alt="lock" class="card__image">
                   <figcaption class="card__caption">
                     <h2 class="card__title">AES 256/192/128</h2>
                     <p class="card__snippet">Implémentation d'AES 128/192/256 en C </p>
@@ -400,7 +405,7 @@
 
               <div class="card" data-aos="fade-up">
                 <figure class="card__thumb">
-                  <img src="images/tictac.png" alt="coffee moment" class="card__image">
+                  <img src="images/reddit.jpeg" alt="coffee moment" class="card__image">
                   <figcaption class="card__caption">
                     <h2 class="card__title">Reddit client</h2>
                     <p class="card__snippet">Application React (front-end) permettant à l'utilisateur de voir les derniers fils Reddit populaires.</p>
@@ -411,7 +416,7 @@
 
               <div class="card" data-aos="fade-up">
                 <figure class="card__thumb">
-                  <img src="images/tictac.png" alt="coffee moment" class="card__image">
+                  <img src="images/lightbringer-de-clayrel.jpeg" alt="coffee moment" class="card__image">
                   <figcaption class="card__caption">
                     <h2 class="card__title">Haras de Clayrel</h2>
                     <p class="card__snippet">Site professionnel du Haras de Clayrel, élevage de chevaux miniatures américains AMHA/AMHR/ASPC.</p>
@@ -504,13 +509,12 @@
                   <div class="card-body">
                     <h5 class="text-uppercase font-weight-bold mb-5 highlight"> OPTIMISATION / SEO </h5>
                     <h5 class="center"> A PARTIR DE </h5>
-                    <h1 class="center text-uppercase price highlight"> 250€ </h1>
+                    <h1 class="center text-uppercase price highlight"> 300€ </h1>
                     <ul class="list-unstyled">
                       <li class="text-uppercase py-3 card-list-item"><span class="highlight">✔</span> Sur site préexistant</li>
                       <li class="text-uppercase py-3 card-list-item"><span class="highlight">✔</span> Analyse de votre site</li>
                       <li class="text-uppercase py-3 card-list-item"><span class="highlight">✔</span> Optimisation de votre référencement naturel</li>
                       <li class="text-uppercase py-3 card-list-item"><span class="highlight">✔</span> Amélioration de votre visibilité sur les moteurs de recherche</li>
-                      <li class="text-uppercase py-3 card-list-item"><span class="highlight">✔</span> Domaine compris pendant un an</li>
                       <li class="text-uppercase py-3 card-list-item border-0"><span class="highlight">+</span> Options disponibles (optimisation des performances, hébergement) </li>
                     </ul>
                     <button onclick="contactview()" class="center btn p-2 text-uppercase font-weight-bold price-card-button text-light">Demander un devis </button> 
@@ -522,7 +526,7 @@
                 <div class="card card-1 py-4 my-4 mx-auto">
                   <div class="card-body">
                     <h5 class="text-uppercase font-weight-bold mb-5 highlight">MAINTENANCE </h5>
-                    <h5 class="center"> <span class="highlight" style="font-size: 60px">50€</span>/MOIS OU <span class="highlight" style="font-size: 60px">35€</span>/HEURE </h5>
+                    <h5 class="center"> <span class="highlight" style="font-size: 50px">50€</span>/MOIS OU <span class="highlight" style="font-size: 50px">35€</span>/HEURE </h5>
                     <ul class="list-unstyled">
                       <li class="text-uppercase py-3 card-list-item"><span class="highlight">✔</span> Optimisation de votre site</li>
                       <li class="text-uppercase py-3 card-list-item"><span class="highlight">✔</span> Mises à jour, maintien de la sécurité </li>
@@ -672,14 +676,39 @@
       <!-- Footer -->
       <footer>
         <div id="footersection">
+          <p class="copyright"><a href="politique-de-confidentialité.html">Politique de confidentialité(englais)</a></p>
           <span class="copyright">© 2022 Gammapps, Gabrielle Marsallon, All Rights Reserved </span>
         </div>
       </footer>
 
     </main>
+    
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script> 
         AOS.init({startEvent: 'AOSEvent'});
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+    <script>
+      window.cookieconsent.initialise({
+        "palette": {
+          "popup": {
+            "background": "#eb6c44",
+            "text": "#ffffff"
+          },
+          "button": {
+            "background": "transparent",
+            "text": "#ffffff",
+            "border": "#2c2c2c"
+          }
+        },
+        "position": "bottom-left",
+        "type": "opt-out",
+        "content": {
+          "message": "This website uses cookies to ensure you get the best experience on our website. Some functionalities may not work properly if you decline them.",
+          "href": "www.gammapps.com/politique-de-confidentialité.html"
+        }
+      });
     </script>
   </body>
 </html>

@@ -1,0 +1,159 @@
+
+
+html {
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+    
+}
+
+
+html, body {
+    width: 100%;
+    min-width: 200px;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+    background-color: #fffffff1;
+    color: #2c2c2c;
+    font-family: 'Quicksand';
+}
+
+.containerg {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100vw;
+    margin: 1.5rem 0;
+}
+
+p, h1 {
+    padding: 0 2rem;
+}
+/* span highlighting */
+
+.highlight {
+    color: rgb(255, 132, 0);
+    font-weight: bold;
+}
+
+#cookie-section, #privacy-policy, #terms-uses {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 0 1 100%;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 4rem;
+    padding: 3rem
+
+    }
+
+
+/* banner section */
+#mybanner {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 0 1 100%;
+    justify-content: center;
+    align-items: center;
+    color: white
+}
+
+#errorbanner {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('./images/workspace.webp');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .nav-link:hover {
+    color: rgb(255, 132, 0) !important;
+    cursor: pointer;
+  }
+
+  #gammapps-logo {
+    color: rgb(255, 132, 0);
+    font-weight: 600; 
+  }
+
+  #goback {
+    margin-top: 2rem !important;
+    font-size : 1.5rem !important; 
+    font-weight: 500 !important;
+    border-color: rgb(255, 132, 0);
+    color: rgb(255, 132, 0);
+    box-shadow: 0 0 10px #09090c;
+    text-shadow: 0 0 10px #09090c;
+    background-color: #2c2c2c;
+    margin: 0 1rem
+}
+
+#goback:hover {
+    background-color: rgb(255, 132, 0);
+    color: black;
+    text-shadow: none;
+}
+
+
+/* footer Section */
+
+footer {
+    background-color:#2c2c2c;
+    color: white;
+    padding: 0 2rem 0 2rem;
+}
+
+
+#footersection {
+    display: flex;
+    flex-direction: column;
+    flex: 0 1 100%;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 0;
+}
+
+@media only screen and (max-width:620px) {
+    footer{
+        font-size: 14px;
+        
+    }
+}
+
+@media only screen and (max-width:400px) {
+    footer{
+        font-size: 10px;
+        padding: 0 1rem 0 1rem;
+    }
+    #footersection {
+        padding: 1rem 0;
+    }
+}
+
+.titles {
+    padding-top: 2rem;
+    text-align: center;
+    font-size: 3rem;
+    padding-bottom: 4rem;
+    font-family: "Oswald", sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.2rem;
+}
+
+.subtitles {
+    padding-top: 3rem;
+    font-size: 2rem;
+    padding-bottom: 0.5rem;
+    font-family: "Oswald", sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.2rem;
+    color:rgb(255, 132, 0)
+}
+ 
+

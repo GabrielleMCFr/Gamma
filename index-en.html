@@ -11,12 +11,16 @@
         <link rel="stylesheet" href="./glow.css">
         <link rel="stylesheet" href="./portfoliocss.css">
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
 
         <!-- google fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Antic+Slab&family=Cinzel:wght@700&family=Dancing+Script&family=Gideon+Roman&family=Manrope:wght@200;300;400;500;600;700&family=Poiret+One&family=Quicksand:wght@400;500;600;700&family=Satisfy&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&display=swap" rel="stylesheet">
+
+        <!-- if js not enabled -->
+        <noscript><meta http-equiv="refresh" content="1;error.html"></noscript>
 
         <!-- meta -->
         <meta charset="UTF-8">
@@ -40,12 +44,14 @@
           })(document, window, 'SibConversations');
         </script>
         <!-- /Sendinblue Conversations {/literal} -->
+
+        
     </head>
 
     <body>
    
       <div id="intro">
-        <h1 class="glowIn" id="glowintitle">Welcome!</h1>
+        <h1 class="glowIn" id="glowintitle">Welcome on Gammapps!</h1>
         <p class="glowIn" id="glowinp">Professional and personnal websites creation services</p>
         <p class="glowIn" id="glowinp">Web developpement</p>
         <p class="glowIn" id="glowinp">Select enter to visit the website or choose the french version below.</p>
@@ -63,8 +69,9 @@
         <section id="bannersection" class="banner">
           <header>
             <div class="content">
-              <h4>GAMMAPPS</h4>
+              
               <nav class="transparent navbar fixed-top navbar-expand-sm" id="navbarhome">
+                <h4 id="gammapps">GAMMAPPS</h4>
                 <div class="justify-content-center container-fluid" >
                   <ul class="navbar-nav mb-2 mb-lg-0 " >
                     <li class="nav-item">
@@ -88,7 +95,7 @@
                   </ul>
                 </div>
 
-                🇫<a href="index.html" class="flag" id="flag" alt="French version">🇫🇷</a>
+                <a href="index.html" class="flag" id="flag" alt="French version">🇫🇷</a>
               </nav>
 
               <div class="navcontainer">
@@ -96,7 +103,7 @@
                   <nav class="mobile navbar fixed-top bg-dark" id="navbarmobile2">
                     <ul>
                       <div id="menuToggle">
-                        <input type="checkbox" />
+                        <input type="checkbox" id="mobiletogglemenu"/>
                           <span></span>
                           <span></span>
                           <span></span>
@@ -123,24 +130,26 @@
                      </div>
                     </ul> 
                     
-                    <a href="index-en.html" id="flag" class="flag">🇺🇸</a> 
+                    <a href="index.html" class="flag" id="flag" alt="French version">🇫🇷</a>
               </nav>
               
                </div>
             </div>
 
             <div id="title">
-              <h1>Gabrielle Marsallon</h1>
-              <h3>Web developer</h3>
-              <h3>Websites and web apps</h3>
-              <button id="devisbutton" onclick="contactview()" class="btn btn btn-outline-warning btn-lg">Commencez votre projet</button>
+              <h1 data-aos="zoom-in-down" data-aos-duration="3000">Gabrielle Marsallon</h1>
+              <h3 data-aos="zoom-in" data-aos-duration="3000">Web developer</h3>
+              <h3 data-aos="zoom-in" data-aos-duration="3000">Websites and web apps</h3>
+              <button id="devisbutton" onclick="contactview()" class="btn btn btn-outline-warning btn-lg" data-aos="zoom-in" data-aos-duration="3000">Let's talk about your project!</button>
+              <button id="scrollarrow" onclick="servicesview()"></button>
             </div>
 
             <div id="mobiletitle">
               <h1>Gabrielle Marsallon</h1>
               <h3>Web developer</h3>
               <h3>Websites and web apps</h3>
-              <button id="devisbutton" onclick="contactview()" class="btn btn btn-outline-warning btn-sm">Commencez votre projet</button>
+              <button id="devisbutton" onclick="contactview()" class="btn btn btn-outline-warning btn-sm">Let's talk about your project!</button>
+              <button id="scrollarrow" onclick="servicesview()"></button>
             </div>
           </div>
           </header>     
@@ -210,14 +219,14 @@
               <div class="containerg" id="projectcontainer">
 
                 <div class="projectcard" data-aos="fade-up">
-                  <img class="iconproject" src="./images/consultdark.gif"/>
+                  <img class="iconproject" src="./images/consultd.gif"/>
                   <div class="servicecontent">
                   <h6 class="titleprojectcard">1- ANALYSE AND QUOTATION</h6>
                   <p class="serviceparagraphe">We'll take the time to clarify what do you want, what are your objectives and which kind of design and style you prefer. Then with these informations, I'll make a free quotation for your project.</p>
                   </div>
                 </div>
                 <div class="projectcard" data-aos="fade-up">
-                  <img class="iconproject" src="./images/design.gif"/>
+                  <img class="iconproject" src="./images/editg.gif"/>
                   <div class="servicecontent">
                   <h6 class="titleprojectcard">2- WEB DESIGN</h6>
                   <p class="serviceparagraphe">Once the quotation is signed, I'll make you a first prototype so you can see what your project will look like. For this step, we'll talk/exchange emails back and forth so you can make sure the design is how you want it to be. Once I have made a prototype, I'll send you the result so you can review it and ask me for modifications if needed.</p>                
@@ -246,16 +255,19 @@
         <section id="aboutme" >
           <h2 id="aboutmeh2" tabindex="0">ABOUT ME</h2>
           <div class="divider div-transparent div-arrow-down"></div>
-            <div id="aboutme-section" tabindex="0">
-                <div class="imgwrapper" data-aos="fade-right">
-                  <img src="images/dubai.JPG" id="imgdubai" alt="dubai">
-                </div>
-                <div id="aboutcontent" data-aos="fade-left">
-                  <p>After graduating from high school with honors, I spent the next years carving my own little corner of the world, buying my house and building infrastructure for all the animals I own, especially horses. In this time, I also perfected my english skills.</p>   
-                  <br>
-                  <p>Then, I decided to deepen my knowledge of one of my hobbies, programming. I took courses like CS50, CS50W, and so obtained a professional certificate in web devlopment from Harvard, and I am currently attending a full stack engineer cursus and a AI course.</p>
-                </div>
+
+          <div id="aboutme-section" tabindex="0">
+            <div class="imgwrapper" data-aos="fade-right">
+              <img src="images/dubai.JPG" id="imgdubai" alt="dubai">
             </div>
+            <div id="aboutcontent" data-aos="fade-left">
+              <h3>Who am I ?</h3>
+              <p>My name is Gabrielle Marsallon, I'm a <span class="highlight">web developer</span>.</p>   
+              <br>
+              <p>After graduating from high school with honors, I spent the next few years taking care of horses and building infrastructure for them. I created a structure to make a safe place for them. In this time, I also perfected my english skills. Then, I decided to deepen my knowledge of one of my hobbies, programming. I took courses like CS50, CS50W, and so obtained a professional certification in web devlopment from Harvard, and later, I also obtained a front-end engineer certification.</p>   
+            </div>
+        </div>
+
             <div id="whatfor">
               <div id="aboutcontent2" data-aos="fade-right">
                 <h3>What can I do for you ?</h3>
@@ -343,7 +355,7 @@
             <div class="container">
               <div class="card" data-aos="fade-up">
                 <figure class="card__thumb">
-                  <img src="images/encrypt.jpg" alt="lock" class="card__image">
+                  <img src="images/it-security.jpeg" alt="lock" class="card__image">
                   <figcaption class="card__caption">
                     <h2 class="card__title">AES 256/192/128</h2>
                     <p class="card__snippet">AES encryptor and decryptor written in C. </p>
@@ -386,7 +398,7 @@
 
               <div class="card" data-aos="fade-up">
                 <figure class="card__thumb">
-                  <img src="images/nextproject.jpg" alt="coffee moment" class="card__image">
+                  <img src="images/reddit.jpeg" alt="coffee moment" class="card__image">
                   <figcaption class="card__caption">
                     <h2 class="card__title">Reddit client</h2>
                     <p class="card__snippet">React front-end application using redux displaying the lastest threads on reddit</p>
@@ -397,7 +409,7 @@
 
               <div class="card" data-aos="fade-up">
                 <figure class="card__thumb">
-                  <img src="images/nextproject.jpg" alt="coffee moment" class="card__image">
+                  <img src="images/lightbringer-de-clayrel.jpeg" alt="coffee moment" class="card__image">
                   <figcaption class="card__caption">
                     <h2 class="card__title">Haras de Clayrel</h2>
                     <p class="card__snippet">Professional website on WP</p>
@@ -415,27 +427,27 @@
           <!-- pricing Section -->
           <section id="pricing-section" class="skewed2">
             <div class="unskew">
-            <h2 id="pricingh2" tabindex="0">TARIFS</h2>
+            <h2 id="pricingh2" tabindex="0">PRICING</h2>
             <div class="divider div-transparent div-arrow-down-pricing"></div>
           
             <div class="row justify-content-center">
               <div class="col-lg-4 align-self-stretch">
                 <div class="card card-1 py-4 my-4 mx-auto ">
                   <div class="card-body">
-                    <h5 class="text-uppercase font-weight-bold mb-5 highlight"> SITE VITRINE </h5>
-                    <h5 class="center"> A PARTIR DE </h5>
+                    <h5 class="text-uppercase font-weight-bold mb-5 highlight"> SHOWCASE WEBSITE </h5>
+                    <h5 class="center"> FROM </h5>
                     <h1 class="center text-uppercase price highlight"> 600€ </h1>
                     <ul class="list-unstyled">
-                      <li class="text-uppercase py-3 card-list-item"><span class="highlight">✔</span> Developpement sous Wordpress ou développé sur mesure </li>
-                      <li class="text-uppercase py-3 card-list-item"><span class="highlight">✔</span> Web design (charte graphique, palette de couleurs, mise en page) </li>
-                      <li class="text-uppercase py-3 card-list-item"><span class="highlight">✔</span> Domaine compris pendant un an</li>
-                      <li class="text-uppercase py-3 card-list-item"><span class="highlight">✔</span> Compatible toute plateforme (pc, tablette, mobile) </li>
-                      <li class="text-uppercase py-3 card-list-item"><span class="highlight">✔</span> Formulaire de contact </li>
-                      <li class="text-uppercase py-3 card-list-item"><span class="highlight">✔</span> Mise en ligne </li>
-                      <li class="text-uppercase py-3 card-list-item"><span class="highlight">✔</span> Explications et prise en main </li>
-                      <li class="text-uppercase py-3 card-list-item border-0"><span class="highlight">+</span> Options disponibles (optimisation du référencement et des performances, hébergement, etc) </li>
+                      <li class="text-uppercase py-3 card-list-item"><span class="highlight">✔</span> Development on Wordpress or completely custom (from scratch)</li>
+                      <li class="text-uppercase py-3 card-list-item"><span class="highlight">✔</span> Web design (graphic charter, color palette, page layout) </li>
+                      <li class="text-uppercase py-3 card-list-item"><span class="highlight">✔</span> Domain included for 12 months</li>
+                      <li class="text-uppercase py-3 card-list-item"><span class="highlight">✔</span> Design responsive - Suitable for any platform (computer, tablet, phone) </li>
+                      <li class="text-uppercase py-3 card-list-item"><span class="highlight">✔</span> Contact form </li>
+                      <li class="text-uppercase py-3 card-list-item"><span class="highlight">✔</span> Deployment on the web</li>
+                      <li class="text-uppercase py-3 card-list-item"><span class="highlight">✔</span> Easy course to familiarize yourself with the website </li>
+                      <li class="text-uppercase py-3 card-list-item border-0"><span class="highlight">+</span> Options available (seo and performances optimization, hosting, etc) </li>
                     </ul>
-                    <button onclick="contactview()" class="center btn p-2 text-uppercase font-weight-bold price-card-button text-light">Demander un devis </button> 
+                    <button onclick="contactview()" class="center btn p-2 text-uppercase font-weight-bold price-card-button text-light">Ask for a quotation </button> 
                   </div>
                 </div>
               </div>
@@ -443,20 +455,20 @@
               <div class="col-lg-4 align-self-stretch">
                 <div class="card card-1 py-4 my-4 mx-auto">
                   <div class="card-body">
-                    <h5 class="text-uppercase font-weight-bold mb-5 highlight"> BOUTIQUE EN LIGNE </h5>
-                    <h5 class="center"> A PARTIR DE </h5>
+                    <h5 class="text-uppercase font-weight-bold mb-5 highlight"> WEBSTORE ECOMMERCE </h5>
+                    <h5 class="center"> FROM </h5>
                     <h1 class="center text-uppercase price highlight"> 999€ </h1>
                     <ul class="list-unstyled">
-                      <li class="text-uppercase py-3 card-list-item"><span class="highlight">✔</span> Developpement sous Wordpress</li>
-                      <li class="text-uppercase py-3 card-list-item"><span class="highlight">✔</span> Web design (charte graphique, palette de couleurs, mise en page) </li>
-                      <li class="text-uppercase py-3 card-list-item"><span class="highlight">✔</span> Domaine compris pendant un an</li>
-                      <li class="text-uppercase py-3 card-list-item"><span class="highlight">✔</span> Compatible toute plateforme (pc, tablette, mobile) </li>
-                      <li class="text-uppercase py-3 card-list-item"><span class="highlight">✔</span> Formulaire de contact </li>
-                      <li class="text-uppercase py-3 card-list-item"><span class="highlight">✔</span> Mise en ligne </li>
-                      <li class="text-uppercase py-3 card-list-item"><span class="highlight">✔</span> Explications et prise en main </li>
-                      <li class="text-uppercase py-3 card-list-item border-0"><span class="highlight">+</span> Options disponibles (optimisation du référencement et des performances, hébergement, etc) </li>
+                      <li class="text-uppercase py-3 card-list-item"><span class="highlight">✔</span> Development on Wordpress</li>
+                      <li class="text-uppercase py-3 card-list-item"><span class="highlight">✔</span> Web design (graphic charter, color palette, page layout) </li>
+                      <li class="text-uppercase py-3 card-list-item"><span class="highlight">✔</span> Domain included for 12 months</li>
+                      <li class="text-uppercase py-3 card-list-item"><span class="highlight">✔</span> Design responsive - Suitable for any platform (computer, tablet, phone) </li>
+                      <li class="text-uppercase py-3 card-list-item"><span class="highlight">✔</span> Contact form </li>
+                      <li class="text-uppercase py-3 card-list-item"><span class="highlight">✔</span> Deployment on the web</li>
+                      <li class="text-uppercase py-3 card-list-item"><span class="highlight">✔</span> Easy course to familiarize yourself with the website </li>
+                      <li class="text-uppercase py-3 card-list-item border-0"><span class="highlight">+</span> Options available (seo and performances optimization, hosting, etc) </li>
                     </ul>
-                    <button onclick="contactview()" class="center btn p-2 text-uppercase font-weight-bold price-card-button text-light"> Demander un devis </button>
+                    <button onclick="contactview()" class="center btn p-2 text-uppercase font-weight-bold price-card-button text-light">Ask for a quotation </button>
                   </div>
                 </div>
               </div>
@@ -466,18 +478,19 @@
                 <div class="card card-1 py-4 my-4 mx-auto">
                   <div class="card-body">
                     <h5 class="text-uppercase font-weight-bold mb-5 highlight">WEB APPLICATION </h5>
-                    <h5 class="center"> A PARTIR DE </h5>
+                    <h5 class="center"> FROM </h5>
                     <h1 class="center text-uppercase price highlight"> 2000€ </h1>
                     <ul class="list-unstyled">
-                      <li class="text-uppercase py-3 card-list-item"><span class="highlight">✔</span> Développé sur mesure, utilisation du framework de votre choix </li>
-                      <li class="text-uppercase py-3 card-list-item"><span class="highlight">✔</span> Web design (charte graphique, palette de couleurs, mise en page) </li>
-                      <li class="text-uppercase py-3 card-list-item"><span class="highlight">✔</span> Domaine compris pendant un an</li>
-                      <li class="text-uppercase py-3 card-list-item"><span class="highlight">✔</span> Compatible toute plateforme (pc, tablette, mobile) </li>
-                      <li class="text-uppercase py-3 card-list-item"><span class="highlight">✔</span> Interface d'administration sur mesure</li>
-                      <li class="text-uppercase py-3 card-list-item"><span class="highlight">✔</span> Mise en ligne </li>
-                      <li class="text-uppercase py-3 card-list-item border-0"><span class="highlight">+</span> Options disponibles (optimisation du référencement et des performances, hébergement, etc) </li>
+                      <li class="text-uppercase py-3 card-list-item"><span class="highlight">✔</span> Development completely custom (from scratch, using the framework of your choice)</li>
+                      <li class="text-uppercase py-3 card-list-item"><span class="highlight">✔</span> Web design (graphic charter, color palette, page layout) </li>
+                      <li class="text-uppercase py-3 card-list-item"><span class="highlight">✔</span> Domain included for 12 months</li>
+                      <li class="text-uppercase py-3 card-list-item"><span class="highlight">✔</span> Design responsive - Suitable for any platform (computer, tablet, phone) </li>
+                      <li class="text-uppercase py-3 card-list-item"><span class="highlight">✔</span> Custom administrative Interface </li>
+                      <li class="text-uppercase py-3 card-list-item"><span class="highlight">✔</span> Deployment on the web</li>
+                      <li class="text-uppercase py-3 card-list-item"><span class="highlight">✔</span> Easy course to familiarize yourself with the application </li>
+                      <li class="text-uppercase py-3 card-list-item border-0"><span class="highlight">+</span> Options available (seo and performances optimization, hosting, etc) </li>
                     </ul>
-                    <button onclick="contactview()" class="center btn p-2 text-uppercase font-weight-bold price-card-button text-light"> Demander un devis </button>
+                    <button onclick="contactview()" class="center btn p-2 text-uppercase font-weight-bold price-card-button text-light">Ask for a quotation </button>
                   </div>
                 </div>
               </div>
@@ -488,18 +501,17 @@
               <div class="col-lg-4 align-self-stretch">
                 <div class="card card-1 py-4 my-4 mx-auto ">
                   <div class="card-body">
-                    <h5 class="text-uppercase font-weight-bold mb-5 highlight"> OPTIMISATION / SEO </h5>
-                    <h5 class="center"> A PARTIR DE </h5>
-                    <h1 class="center text-uppercase price highlight"> 250€ </h1>
+                    <h5 class="text-uppercase font-weight-bold mb-5 highlight"> OPTIMIZATION / SEO </h5>
+                    <h5 class="center"> FROM </h5>
+                    <h1 class="center text-uppercase price highlight"> 300€ </h1>
                     <ul class="list-unstyled">
-                      <li class="text-uppercase py-3 card-list-item"><span class="highlight">✔</span> Sur site préexistant</li>
-                      <li class="text-uppercase py-3 card-list-item"><span class="highlight">✔</span> Analyse de votre site</li>
-                      <li class="text-uppercase py-3 card-list-item"><span class="highlight">✔</span> Optimisation de votre référencement naturel</li>
-                      <li class="text-uppercase py-3 card-list-item"><span class="highlight">✔</span> Amélioration de votre visibilité sur les moteurs de recherche</li>
-                      <li class="text-uppercase py-3 card-list-item"><span class="highlight">✔</span> Domaine compris pendant un an</li>
-                      <li class="text-uppercase py-3 card-list-item border-0"><span class="highlight">+</span> Options disponibles (optimisation des performances, hébergement) </li>
+                      <li class="text-uppercase py-3 card-list-item"><span class="highlight">✔</span> On a preexisting website</li>
+                      <li class="text-uppercase py-3 card-list-item"><span class="highlight">✔</span> Analyze of your website</li>
+                      <li class="text-uppercase py-3 card-list-item"><span class="highlight">✔</span> Natural referencing (SEO) optimization</li>
+                      <li class="text-uppercase py-3 card-list-item"><span class="highlight">✔</span> Improve your visibility in the result of search engines</li>
+                      <li class="text-uppercase py-3 card-list-item border-0"><span class="highlight">+</span> Options available (performances optimization, hosting, etc) </li>
                     </ul>
-                    <button onclick="contactview()" class="center btn p-2 text-uppercase font-weight-bold price-card-button text-light">Demander un devis </button> 
+                    <button onclick="contactview()" class="center btn p-2 text-uppercase font-weight-bold price-card-button text-light">Ask for a quotation </button> 
                   </div>
                 </div>
               </div>
@@ -508,13 +520,13 @@
                 <div class="card card-1 py-4 my-4 mx-auto">
                   <div class="card-body">
                     <h5 class="text-uppercase font-weight-bold mb-5 highlight">MAINTENANCE </h5>
-                    <h5 class="center"> <span class="highlight" style="font-size: 60px">50€</span>/MOIS OU <span class="highlight" style="font-size: 60px">35€</span>/HEURE </h5>
+                    <h5 class="center"> <span class="highlight" style="font-size: 50px">50€</span>/MONTH OR <span class="highlight" style="font-size: 50px">35€</span>/HOUR </h5>
                     <ul class="list-unstyled">
-                      <li class="text-uppercase py-3 card-list-item"><span class="highlight">✔</span> Optimisation de votre site</li>
-                      <li class="text-uppercase py-3 card-list-item"><span class="highlight">✔</span> Mises à jour, maintien de la sécurité </li>
-                      <li class="text-uppercase py-3 card-list-item"><span class="highlight">✔</span> Sauvegardes mensuelles et restaurations</li>
-                      <li class="text-uppercase py-3 card-list-item"><span class="highlight">✔</span> Sécurité et tranquilité</li>
-                      <li class="text-uppercase py-3 card-list-item border-0"><span class="highlight">+</span> Options disponibles (optimisation des performances, hébergement) </li>
+                      <li class="text-uppercase py-3 card-list-item"><span class="highlight">✔</span> Optimization of your website</li>
+                      <li class="text-uppercase py-3 card-list-item"><span class="highlight">✔</span> Updates </li>
+                      <li class="text-uppercase py-3 card-list-item"><span class="highlight">✔</span> Monthly data backups, back-up management, restoration</li>
+                      <li class="text-uppercase py-3 card-list-item"><span class="highlight">✔</span> Security and serenity</li>
+                      <li class="text-uppercase py-3 card-list-item border-0"><span class="highlight">+</span> Options available (performances optimization, hosting, etc) </li>
                     </ul>
                     <button onclick="contactview()" class="center btn p-2 text-uppercase font-weight-bold price-card-button text-light"> Contact </button>
                   </div>
@@ -524,9 +536,9 @@
               <div class="col-lg-4 align-self-stretch">
                 <div class="card card-1 py-4 my-4 mx-auto">
                   <div class="card-body">
-                    <h5 class="text-uppercase font-weight-bold mb-5 highlight"> DEVELOPPEMENT SPECIFIQUE </h5>
-                    <h5 class="center"> SUR DEVIS </h5>
-                    <button onclick="contactview()" class="center btn p-2 text-uppercase font-weight-bold price-card-button text-light"> Demander un devis </button>
+                    <h5 class="text-uppercase font-weight-bold mb-5 highlight"> SPECIFIC DEVELOPMENT </h5>
+                    <h5 class="center"> ON QUOTATION </h5>
+                    <button onclick="contactview()" class="center btn p-2 text-uppercase font-weight-bold price-card-button text-light"> Ask for a quotation </button>
                   </div>
                 </div>
               </div>
@@ -539,34 +551,158 @@
           <div class="separator" id="contactscroll" tabindex="0"></div>
             
           <!-- contact Section -->
-          <section id="contact-section">    
-            <h2 id="contacth2" tabindex="0">CONTACT ME</h2>
+          <section id="contact-section" tabindex="0">    
+            <h2 id="contacth2" >ME CONTACTER</h2>
             <div class="divider div-transparent div-arrow-down"></div>
-            <h5>Feel free to contact me if you have any question.</h5>
-            <br> 
-            <div class="contact" id="contactdiv">
-              <h5 data-aos="fade-up">Gabrielle Marsallon</h5>
-              <a data-aos="fade-up" href="https://www.facebook.com/haras.declayrel.7/"> <img src="images/facebook.png" id="logofb" title="My facebook account" alt="link to facebook account"></a>
-              <br>
-              <h5 data-aos="fade-up">gabrielle.mc@outlook.fr</h5> 
-              <br>
-              <h5 data-aos="fade-up"> +33 6 50 77 70 32</h5>       
-            </div>   
-          </section>
+            <h5>Feel free to contact me if you have any question or if you want a quotation for your project.</h5>
+            <h5>You can do so by using the chat, the contact form, social medias, phone or email.</h5>
+            <br>  
+
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-md-12" data-aos="fade-up">
+                  <div class="wrapper">
+                    <div class="row mb-5">
+                      <div class="col-md-3">
+                        <div class="dbox w-100 text-center">
+                          <div class="icon d-flex align-items-center justify-content-center">
+                            <img class="iconcontactcontainer" src="./images/avatar.gif">
+                          </div>
+                          <div class="text">
+                            <p>Gabrielle Marsallon</p>
+                            <p>
+                              <a href="#" class="socialmedia-button"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                                <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+                              </svg></a>
+                              <a href="#" class="socialmedia-button"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                                <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+                              </svg></a>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                        <div class="dbox w-100 text-center">
+                          <div class="icon d-flex align-items-center justify-content-center">
+                            <img class="iconcontactcontainer" src="./images/locg.gif">
+                          </div>
+                          <div class="text">
+                            <p>La grande bretèche 28160 Unverre France</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                        <div class="dbox w-100 text-center">
+                          <div class="icon d-flex align-items-center justify-content-center">
+                            <img class="iconcontactcontainer" src="./images/phonecall.gif">
+                          </div>
+                          <div class="text">
+                            <p> <a href="tel://0650777032">0650777032</a></p>
+                          </div>
+                      </div>
+                    </div>
+                    <div class="col-md-3">
+                      <div class="dbox w-100 text-center">
+                        <div class="icon d-flex align-items-center justify-content-center">
+                          <img class="iconcontactcontainer" src="./images/email.gif">
+                        </div>
+                        <div class="text">
+                          <p><span class="email">gabrielle.mc@outlook.fr</span></p>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                <div class="row no-gutters">
+                  <div class="col-md-7" data-aos="fade-right">
+                    <div class="contact-wrap w-100 p-md-5 p-4">
+                      <h3 class="mb-4">Contact form</h3>
+                        <div id="form-message-warning" class="mb-4"></div>
+                        <div id="form-message-success" class="mb-4"> Your message has been sent, I'll answer you as soon as I can !</div>
+                        <form method="POST" id="contactForm" name="contactForm" class="contactForm">
+                          
+                          <div class="row">
+                            <div class="col-md-6">
+                              <div class="form-group">
+                                <label class="label" for="name">Name</label>
+                                  <input type="text" class="form-control" name="name" id="name" placeholder="Nom" required>
+                              </div>
+                            </div>
+                          <div class="col-md-6">
+                            <div class="form-group">
+                              <label class="label" for="email">Email address</label>
+                              <input type="email" class="form-control" name="email" id="email" placeholder="Email" required>
+                            </div>
+                          </div>
+                          <div class="col-md-12">
+                            <div class="form-group">
+                              <label class="label" for="subject">Subject</label>
+                              <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject of your message">
+                            </div>
+                          </div>
+                          <div class="col-md-12">
+                            <div class="form-group">
+                              <label class="label" for="#">Message</label>
+                              <textarea name="message" class="form-control" id="message" cols="30" rows="4" placeholder="Message" required></textarea>
+                            </div>
+                          </div>
+                          <div class="col-md-12">
+                            <div class="form-group">
+                              <input type="submit" value="Envoyer" class="btn btn-primary" id="submitform">
+                              <div class="submitting"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                  <div class="col-md-5 d-flex align-items-stretch" data-aos="fade-left">
+                    <div class="info-wrap w-100 p-5 img" id="contactimg"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
 
         <!-- Footer -->
         <footer>
           <div id="footersection">
+            <p class="copyright"><a href="confidentiality-policy.html">Confidentiality policy</a></p>
             <span class="copyright">© 2022 Gammapps, Gabrielle Marsallon, All Rights Reserved </span>
           </div>
         </footer>
 
-        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-        <script>
-          AOS.init({startEvent: 'AOSEvent'});
-        </script>
-
       </main>
+      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script> 
+        AOS.init({startEvent: 'AOSEvent'});
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+    <script>
+      window.cookieconsent.initialise({
+        "palette": {
+          "popup": {
+            "background": "#eb6c44",
+            "text": "#ffffff"
+          },
+          "button": {
+            "background": "transparent",
+            "text": "#ffffff",
+            "border": "#2c2c2c"
+          }
+        },
+        "position": "bottom-left",
+        "type": "opt-out",
+        "content": {
+          "message": "This website uses cookies to ensure you get the best experience on our website. Some functionalities may not work properly if you decline them.",
+          "href": "www.gammapps.com/confidentiality-policy.html"
+        }
+      });
+    </script>
+
     </body>
+    
   </html>
