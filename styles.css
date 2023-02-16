@@ -213,7 +213,6 @@ header .content a {
     height: 100vh;
     background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('./images/wallpaper.jpg');
     background-repeat: no-repeat;
-    background-position: center;
     background-size: cover;
     display: flex;
     align-items: center;
@@ -313,20 +312,7 @@ header .content a {
         margin: 0;
     }
 }
-/* services Section */
-#services-section {
-    display: flex;
-    flex-wrap: wrap;
-    flex: 0 1 100%;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 4rem;
-}
 
-#services-section h5 {
-    color:rgb(95, 95, 95);
-    text-align: center;
-}
 
 /* portfolioS Section */
 
@@ -477,8 +463,10 @@ header .content a {
 
 /* skills */
 
+
+
 #skills-section {
-    width: 40%;
+    width: 80%;
     min-width: 590px;
     text-align: center;
     padding-top: 4rem;
@@ -489,6 +477,9 @@ header .content a {
     width: 100%;
     padding: 30px 30px 50px;
     border-radius: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 2rem;
 }
 
 /* bars design */
@@ -566,7 +557,7 @@ header .content a {
 
 @keyframes sql-fill{
     100%{
-        width: 50%;
+        width: 90%;
     }
 }
 
@@ -589,6 +580,99 @@ header .content a {
         width: 85%;
     }
 }
+
+.active #cs-bar {
+    animation: cs-fill 5s forwards;
+}
+
+@keyframes cs-fill{
+    100%{
+        width: 70%;
+    }
+}
+
+.active #django-bar {
+    animation: django-fill 5s forwards;
+}
+
+@keyframes django-fill{
+    100%{
+        width: 75%;
+    }
+}
+
+.active #reactjs-bar {
+    animation: reactjs-fill 5s forwards;
+}
+
+@keyframes reactjs-fill{
+    100%{
+        width: 85%;
+    }
+}
+
+.active #vuejs-bar {
+    animation: vue-fill 5s forwards;
+}
+
+@keyframes vue-fill{
+    100%{
+        width: 40%;
+    }
+}
+
+.active #dotnet-bar {
+    animation: dotnet-fill 5s forwards;
+}
+
+@keyframes dotnet-fill{
+    100%{
+        width: 70%;
+    }
+}
+
+.active #aws-bar {
+    animation: aws-fill 5s forwards;
+}
+
+@keyframes aws-fill{
+    100%{
+        width: 70%;
+    }
+}
+
+.active #ts-bar {
+    animation: ts-fill 5s forwards;
+}
+
+@keyframes ts-fill{
+    100%{
+        width: 60%;
+    }
+}
+
+.active #ai-bar {
+    animation: ai-fill 5s forwards;
+}
+
+@keyframes ai-fill{
+    100%{
+        width: 75%;
+    }
+}
+
+.active #node-bar {
+    animation: node-fill 5s forwards;
+}
+
+@keyframes node-fill{
+    100%{
+        width: 80%;
+    }
+}
+
+
+
 
 
 @media only screen and (max-width:931px) {
@@ -814,6 +898,19 @@ footer {
 }
 
 /* services */
+#services-section {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 0 1 100%;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 4rem;
+}
+
+#services-section h5 {
+    color:rgb(95, 95, 95);
+    text-align: center;
+}
 
 
 .servicecard {
@@ -832,12 +929,34 @@ footer {
 }
 
 
+@media only screen and (max-width:750px) {
+    body {
+        font-size: 0.85rem;
+    }
+    
+}
+
+
 
 .titleservicecard {
     margin: 5rem 2rem 2rem;
     font-family: "Oswald", sans-serif;
     font-size: 1.5rem;
     text-align: center;
+}
+
+@media only screen and (max-width:320px) {
+    .titleservicecard {
+        font-size: 1rem;
+    }
+    
+}
+
+@media only screen and (max-width:260px) {
+    .titleservicecard {
+        font-size: 0.8rem;
+    }
+    
 }
 
 .servicecard:hover {
@@ -1005,6 +1124,8 @@ footer {
 
 
 /* pricing section */ 
+
+
 #pricing-section {
     padding: 2rem 2rem 6rem 2rem;
     color:#2c2c2c

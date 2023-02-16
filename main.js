@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     //document.addEventListener('keydown', startview);
 
-    let skillsbox = document.getElementById('html-bar');
+    let skillsbox = document.getElementById('observer-intersection');
     let observer = new IntersectionObserver(skillobserver, options);
     observer.observe(skillsbox);
 
